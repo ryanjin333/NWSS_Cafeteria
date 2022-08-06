@@ -7,23 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C7289D9A920082AC43 /* HomeTableView.swift */; };
+		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
+		573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */; };
+		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
 		577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA255288CD3FB0093D25F /* AppDelegate.swift */; };
 		577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA257288CD3FB0093D25F /* SceneDelegate.swift */; };
-		577BA25A288CD3FB0093D25F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA259288CD3FB0093D25F /* ViewController.swift */; };
-		577BA25D288CD3FB0093D25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577BA25B288CD3FB0093D25F /* Main.storyboard */; };
+		577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA259288CD3FB0093D25F /* HomeController.swift */; };
 		577BA25F288CD3FB0093D25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577BA25E288CD3FB0093D25F /* Assets.xcassets */; };
 		577BA262288CD3FB0093D25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577BA260288CD3FB0093D25F /* LaunchScreen.storyboard */; };
+		577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA26D288CE3040093D25F /* HelperHomeController.swift */; };
+		577BA271288CE4B70093D25F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA270288CE4B70093D25F /* UIColorExtension.swift */; };
+		577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA272288CE4DA0093D25F /* UIViewExtension.swift */; };
+		579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */; };
+		579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */; };
+		579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */; };
+		579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67F2897421200DC4BAE /* SettingsTitleTableList.swift */; };
+		579BF682289742CB00DC4BAE /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF681289742CB00DC4BAE /* SettingsTableViewCell.swift */; };
+		579BF6842897437800DC4BAE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF6832897437700DC4BAE /* SettingsController.swift */; };
+		579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF6862897625500DC4BAE /* HelperSettingsController.swift */; };
+		579BF68C2897666D00DC4BAE /* SettingsControllerBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF68B2897666D00DC4BAE /* SettingsControllerBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		573808C7289D9A920082AC43 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleTableList.swift; sourceTree = "<group>"; };
+		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
 		577BA252288CD3FB0093D25F /* NWSS Cafeteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NWSS Cafeteria.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577BA255288CD3FB0093D25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577BA257288CD3FB0093D25F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		577BA259288CD3FB0093D25F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		577BA25C288CD3FB0093D25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		577BA259288CD3FB0093D25F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		577BA25E288CD3FB0093D25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577BA261288CD3FB0093D25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		577BA263288CD3FB0093D25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		577BA26D288CE3040093D25F /* HelperHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperHomeController.swift; sourceTree = "<group>"; };
+		577BA270288CE4B70093D25F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		577BA272288CE4DA0093D25F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerOrderBarView.swift; sourceTree = "<group>"; };
+		579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICALayerExtension.swift; sourceTree = "<group>"; };
+		579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		579BF67F2897421200DC4BAE /* SettingsTitleTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTitleTableList.swift; sourceTree = "<group>"; };
+		579BF681289742CB00DC4BAE /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		579BF6832897437700DC4BAE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		579BF6862897625500DC4BAE /* HelperSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperSettingsController.swift; sourceTree = "<group>"; };
+		579BF68B2897666D00DC4BAE /* SettingsControllerBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		573808CD289D9CFD0082AC43 /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */,
+				573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */,
+			);
+			path = HomeController;
+			sourceTree = "<group>";
+		};
+		573808CE289D9D070082AC43 /* SettingsController */ = {
+			isa = PBXGroup;
+			children = (
+				579BF67F2897421200DC4BAE /* SettingsTitleTableList.swift */,
+			);
+			path = SettingsController;
+			sourceTree = "<group>";
+		};
 		577BA249288CD3FB0093D25F = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +101,92 @@
 		577BA254288CD3FB0093D25F /* NWSS Cafeteria */ = {
 			isa = PBXGroup;
 			children = (
+				577BA26C288CD9370093D25F /* Helper Methods */,
+				577BA269288CD9000093D25F /* Controller */,
+				577BA26A288CD90F0093D25F /* View */,
+				577BA26B288CD9270093D25F /* Model */,
 				577BA255288CD3FB0093D25F /* AppDelegate.swift */,
 				577BA257288CD3FB0093D25F /* SceneDelegate.swift */,
-				577BA259288CD3FB0093D25F /* ViewController.swift */,
-				577BA25B288CD3FB0093D25F /* Main.storyboard */,
+				577BA26F288CE4840093D25F /* Extensions */,
+				579BF6852897536800DC4BAE /* Others */,
 				577BA25E288CD3FB0093D25F /* Assets.xcassets */,
 				577BA260288CD3FB0093D25F /* LaunchScreen.storyboard */,
 				577BA263288CD3FB0093D25F /* Info.plist */,
 			);
 			path = "NWSS Cafeteria";
+			sourceTree = "<group>";
+		};
+		577BA269288CD9000093D25F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				577BA259288CD3FB0093D25F /* HomeController.swift */,
+				579BF6832897437700DC4BAE /* SettingsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		577BA26A288CD90F0093D25F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				579BF689289765F200DC4BAE /* HomeController */,
+				579BF688289765D500DC4BAE /* SettingsController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		577BA26B288CD9270093D25F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				573808CD289D9CFD0082AC43 /* HomeController */,
+				573808CE289D9D070082AC43 /* SettingsController */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		577BA26C288CD9370093D25F /* Helper Methods */ = {
+			isa = PBXGroup;
+			children = (
+				577BA26D288CE3040093D25F /* HelperHomeController.swift */,
+				579BF6862897625500DC4BAE /* HelperSettingsController.swift */,
+			);
+			path = "Helper Methods";
+			sourceTree = "<group>";
+		};
+		577BA26F288CE4840093D25F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				577BA270288CE4B70093D25F /* UIColorExtension.swift */,
+				577BA272288CE4DA0093D25F /* UIViewExtension.swift */,
+				579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		579BF6852897536800DC4BAE /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		579BF688289765D500DC4BAE /* SettingsController */ = {
+			isa = PBXGroup;
+			children = (
+				579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */,
+				579BF681289742CB00DC4BAE /* SettingsTableViewCell.swift */,
+				579BF68B2897666D00DC4BAE /* SettingsControllerBarView.swift */,
+			);
+			path = SettingsController;
+			sourceTree = "<group>";
+		};
+		579BF689289765F200DC4BAE /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				573808C7289D9A920082AC43 /* HomeTableView.swift */,
+				573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */,
+				579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */,
+			);
+			path = HomeController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +249,6 @@
 			files = (
 				577BA262288CD3FB0093D25F /* LaunchScreen.storyboard in Resources */,
 				577BA25F288CD3FB0093D25F /* Assets.xcassets in Resources */,
-				577BA25D288CD3FB0093D25F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +259,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577BA25A288CD3FB0093D25F /* ViewController.swift in Sources */,
+				579BF6842897437800DC4BAE /* SettingsController.swift in Sources */,
+				579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */,
+				579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */,
+				577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */,
+				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
+				577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */,
+				573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */,
 				577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */,
+				577BA271288CE4B70093D25F /* UIColorExtension.swift in Sources */,
+				579BF682289742CB00DC4BAE /* SettingsTableViewCell.swift in Sources */,
+				577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */,
 				577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */,
+				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,
+				579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */,
+				573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */,
+				573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */,
+				573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */,
+				579BF68C2897666D00DC4BAE /* SettingsControllerBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		577BA25B288CD3FB0093D25F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				577BA25C288CD3FB0093D25F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		577BA260288CD3FB0093D25F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +420,7 @@
 				INFOPLIST_FILE = "NWSS Cafeteria/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +448,7 @@
 				INFOPLIST_FILE = "NWSS Cafeteria/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
