@@ -17,12 +17,14 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         
         //Table View Initialization
         view.addSubview(homeTableView)
+        view.addSubview(homeTableViewTopConstraint)
         homeTableView.dataSource = self
         homeTableView.delegate = self
         homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "homeCell")
         
         //Table View Constraints
-        homeTableView.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
+        homeTableViewTopConstraint.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: homeControllerVariables.barHeight)
+        homeTableView.addConstraint(top: homeTableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
     }
     
     //MARK: - Home Table View Data Source

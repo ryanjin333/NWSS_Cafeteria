@@ -42,10 +42,10 @@ class HomeController: UIViewController {
         return tableView
     }()
     
-    let topSafeArea: UIView = {
-        let view = UIView()
-        view.alpha = 0
-        return view
+    let homeTableViewTopConstraint: UIView = {
+        let constraint = UIView()
+        constraint.alpha = 0
+        return constraint
     }()
     
     let homeControllerVariables = HomeControllerVariables()

@@ -8,6 +8,6 @@
 import UIKit
 
 struct HomeTitleTableList {
-    let cellLabels: [String] = ["", "Bruh"]
-    let homeHeights: [CGFloat] = [HomeControllerVariables().barHeight , HomeControllerVariables().cellHeight]
+    let cellLabels: [String] = ["Bruh"]
+    let homeHeights: [CGFloat] = [HomeControllerVariables().cellHeight]
 }
