@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 extension HomeController: UITableViewDelegate, UITableViewDataSource {
     
     private static let fullList = HomeTitleTableList()
+    
     
     //MARK: - Table View Initialization
     
@@ -25,6 +27,13 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         //Table View Constraints
         homeTableViewTopConstraint.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: homeControllerVariables.barHeight)
         homeTableView.addConstraint(top: homeTableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
+    }
+    
+    func setUpHomeTableViewDatabase() {
+        database.child("Menu").observe(.value) {(snap: DataSnapshot) in
+            guard let snapValue = snap.value as? String else { return }
+            self.orderNavigationTitle.title = snapValue
+        }
     }
     
     //MARK: - Home Table View Data Source

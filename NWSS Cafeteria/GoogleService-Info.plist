@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>398568612305-pvldk8jqdhdm0hbjj4knpg4mvj0b49pq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.398568612305-pvldk8jqdhdm0hbjj4knpg4mvj0b49pq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBQdzd0A_iT_f6op82O2eRZZv3fIGPIcpA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>398568612305</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.huij.NWSS-Cafeteria</string>
+	<key>PROJECT_ID</key>
+	<string>nwss-cafeteria</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nwss-cafeteria.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:398568612305:ios:480a3609349eaac9a700f0</string>
+</dict>
+</plist>

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08AF75F2321DDF43C7AF08C6 /* Pods_NWSS_Cafeteria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D57747C4C00825C376DBA5 /* Pods_NWSS_Cafeteria.framework */; };
 		573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C7289D9A920082AC43 /* HomeTableView.swift */; };
 		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
 		573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */; };
 		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
+		573808D628A87D6E0082AC43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 573808D528A87D6E0082AC43 /* GoogleService-Info.plist */; };
+		573808D828A889710082AC43 /* HomeControllerDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D728A889710082AC43 /* HomeControllerDatabase.swift */; };
 		577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA255288CD3FB0093D25F /* AppDelegate.swift */; };
 		577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA257288CD3FB0093D25F /* SceneDelegate.swift */; };
 		577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA259288CD3FB0093D25F /* HomeController.swift */; };
@@ -30,10 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16D57747C4C00825C376DBA5 /* Pods_NWSS_Cafeteria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWSS_Cafeteria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		573808C7289D9A920082AC43 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleTableList.swift; sourceTree = "<group>"; };
 		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
+		573808D528A87D6E0082AC43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		573808D728A889710082AC43 /* HomeControllerDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerDatabase.swift; sourceTree = "<group>"; };
 		577BA252288CD3FB0093D25F /* NWSS Cafeteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NWSS Cafeteria.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577BA255288CD3FB0093D25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577BA257288CD3FB0093D25F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,8 @@
 		579BF6832897437700DC4BAE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		579BF6862897625500DC4BAE /* HelperSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperSettingsController.swift; sourceTree = "<group>"; };
 		579BF68B2897666D00DC4BAE /* SettingsControllerBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerBarView.swift; sourceTree = "<group>"; };
+		6B3A8E871F5D12B23B986873 /* Pods-NWSS Cafeteria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWSS Cafeteria.debug.xcconfig"; path = "Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria.debug.xcconfig"; sourceTree = "<group>"; };
+		DB203572AAF4178E5E55E10D /* Pods-NWSS Cafeteria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWSS Cafeteria.release.xcconfig"; path = "Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +67,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AF75F2321DDF43C7AF08C6 /* Pods_NWSS_Cafeteria.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B74AAC263519CEB06EC20E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B3A8E871F5D12B23B986873 /* Pods-NWSS Cafeteria.debug.xcconfig */,
+				DB203572AAF4178E5E55E10D /* Pods-NWSS Cafeteria.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3F23C2012D5B42D632ABE954 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16D57747C4C00825C376DBA5 /* Pods_NWSS_Cafeteria.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		573808CD289D9CFD0082AC43 /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
 				573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */,
 				573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */,
+				573808D728A889710082AC43 /* HomeControllerDatabase.swift */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -87,6 +114,8 @@
 			children = (
 				577BA254288CD3FB0093D25F /* NWSS Cafeteria */,
 				577BA253288CD3FB0093D25F /* Products */,
+				1B74AAC263519CEB06EC20E2 /* Pods */,
+				3F23C2012D5B42D632ABE954 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +141,7 @@
 				577BA25E288CD3FB0093D25F /* Assets.xcassets */,
 				577BA260288CD3FB0093D25F /* LaunchScreen.storyboard */,
 				577BA263288CD3FB0093D25F /* Info.plist */,
+				573808D528A87D6E0082AC43 /* GoogleService-Info.plist */,
 			);
 			path = "NWSS Cafeteria";
 			sourceTree = "<group>";
@@ -196,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 577BA266288CD3FB0093D25F /* Build configuration list for PBXNativeTarget "NWSS Cafeteria" */;
 			buildPhases = (
+				BA6A19FB8488B0CF654A78C9 /* [CP] Check Pods Manifest.lock */,
 				577BA24E288CD3FB0093D25F /* Sources */,
 				577BA24F288CD3FB0093D25F /* Frameworks */,
 				577BA250288CD3FB0093D25F /* Resources */,
+				C89DF9D5814F4667B307F7FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,11 +280,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				577BA262288CD3FB0093D25F /* LaunchScreen.storyboard in Resources */,
+				573808D628A87D6E0082AC43 /* GoogleService-Info.plist in Resources */,
 				577BA25F288CD3FB0093D25F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA6A19FB8488B0CF654A78C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NWSS Cafeteria-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C89DF9D5814F4667B307F7FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		577BA24E288CD3FB0093D25F /* Sources */ = {
@@ -274,6 +349,7 @@
 				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,
 				579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */,
 				573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */,
+				573808D828A889710082AC43 /* HomeControllerDatabase.swift in Sources */,
 				573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */,
 				573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */,
 				579BF68C2897666D00DC4BAE /* SettingsControllerBarView.swift in Sources */,
@@ -410,6 +486,7 @@
 		};
 		577BA267288CD3FB0093D25F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B3A8E871F5D12B23B986873 /* Pods-NWSS Cafeteria.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -438,6 +515,7 @@
 		};
 		577BA268288CD3FB0093D25F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB203572AAF4178E5E55E10D /* Pods-NWSS Cafeteria.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
