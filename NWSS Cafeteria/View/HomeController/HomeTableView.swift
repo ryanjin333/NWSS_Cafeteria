@@ -29,17 +29,18 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         homeTableView.addConstraint(top: homeTableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
     }
     
-    func setUpHomeTableViewDatabase() {
-        database.child("Menu").observe(.value) {(snap: DataSnapshot) in
-            guard let snapValue = snap.value as? String else { return }
-            self.orderNavigationTitle.title = snapValue
-        }
+    func homeTableViewDatabaseConfigurations() {
+        let ref = Database.database().reference()
+        ref.child(homeControllerVariables.menuName).observe(.value, with: { snapshot in
+            HomeTitleTableList.cellLabels = Array(repeating: "", count: Int(snapshot.childrenCount))
+            self.homeTableView.reloadData()
+        })
     }
     
     //MARK: - Home Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return HomeController.fullList.cellLabels.count
+        return HomeTitleTableList.cellLabels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +52,6 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     //MARK: - Settings Table View Delegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  HomeController.fullList.homeHeights[indexPath.row]
+        return  HomeController.fullList.homeHeights
     }
 }

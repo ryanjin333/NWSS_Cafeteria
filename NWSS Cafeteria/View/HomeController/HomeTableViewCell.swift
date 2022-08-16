@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 
 class HomeTableViewCell: UITableViewCell {
@@ -21,17 +22,30 @@ class HomeTableViewCell: UITableViewCell {
         imageView.contentMode = .scaleToFill
         return imageView
     }()
+ 
+   let homeControllerVariables = HomeControllerVariables()
+
+    
     
     func set(indexPath: IndexPath) {
-        
         //Home Table View Cell Initialization
         self.contentView.addSubview(homeTitleLabel)
         self.contentView.addSubview(itemImageView)
         
-        
-        //Home Table View Cell Label Text
-        let list = HomeTitleTableList()
-        homeTitleLabel.text = list.cellLabels[indexPath.row]
+        //Home Table View Cell Label Attributes
+        let ref = Database.database().reference()
+        ref.child(homeControllerVariables.menuName).observe(.value, with: { snapshot in
+            var i = 0
+            for child in snapshot.children {
+                if (i == indexPath.row) {
+                    guard let child = child as? DataSnapshot else { return }
+                    HomeTitleTableList.cellLabels.insert(child.key, at: indexPath.row)
+                    self.homeTitleLabel.text = HomeTitleTableList.cellLabels[indexPath.row]
+                    break
+                }
+                i += 1
+            }
+          })
         itemImageView.image = UIImage(named: "cake")
         
         //Home Table View Cell Constraints

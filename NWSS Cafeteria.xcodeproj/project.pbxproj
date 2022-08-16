@@ -13,7 +13,6 @@
 		573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */; };
 		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
 		573808D628A87D6E0082AC43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 573808D528A87D6E0082AC43 /* GoogleService-Info.plist */; };
-		573808D828A889710082AC43 /* HomeControllerDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D728A889710082AC43 /* HomeControllerDatabase.swift */; };
 		577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA255288CD3FB0093D25F /* AppDelegate.swift */; };
 		577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA257288CD3FB0093D25F /* SceneDelegate.swift */; };
 		577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA259288CD3FB0093D25F /* HomeController.swift */; };
@@ -39,7 +38,6 @@
 		573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleTableList.swift; sourceTree = "<group>"; };
 		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
 		573808D528A87D6E0082AC43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		573808D728A889710082AC43 /* HomeControllerDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerDatabase.swift; sourceTree = "<group>"; };
 		577BA252288CD3FB0093D25F /* NWSS Cafeteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NWSS Cafeteria.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577BA255288CD3FB0093D25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577BA257288CD3FB0093D25F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			children = (
 				573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */,
 				573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */,
-				573808D728A889710082AC43 /* HomeControllerDatabase.swift */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -349,7 +346,6 @@
 				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,
 				579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */,
 				573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */,
-				573808D828A889710082AC43 /* HomeControllerDatabase.swift in Sources */,
 				573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */,
 				573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */,
 				579BF68C2897666D00DC4BAE /* SettingsControllerBarView.swift in Sources */,

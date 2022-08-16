@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 struct HomeTitleTableList {
-    var cellLabels: [String] = ["bruh"]
-    let homeHeights: [CGFloat] = [HomeControllerVariables().cellHeight]
+    static var cellLabels = [String]()
+    let homeHeights: CGFloat = HomeControllerVariables().cellHeight
 }

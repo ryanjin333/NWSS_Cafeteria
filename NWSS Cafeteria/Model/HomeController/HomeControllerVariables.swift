@@ -10,4 +10,5 @@ import UIKit
 struct HomeControllerVariables {
     let barHeight: CGFloat = 125
     let cellHeight: CGFloat = 80
+    let menuName: String = "Full Menu"
 }

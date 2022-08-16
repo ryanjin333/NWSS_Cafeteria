@@ -21,6 +21,7 @@ extension HomeController {
     
     @objc func settingsButtonTapped(sender: UIButton!) {
         let settingsController = SettingsController()
+        
             settingsController.modalPresentationStyle = .fullScreen
         present(settingsController, animated: true, completion: nil)
     }
