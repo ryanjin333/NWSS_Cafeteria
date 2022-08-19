@@ -19,14 +19,19 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         
         //Table View Initialization
         view.addSubview(homeTableView)
-        view.addSubview(homeTableViewTopConstraint)
+        view.addSubview(subtypeTableView)
+        view.addSubview(tableViewTopConstraint)
         homeTableView.dataSource = self
         homeTableView.delegate = self
+        subtypeTableView.dataSource = self
+        subtypeTableView.delegate = self
         homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "homeCell")
+        subtypeTableView.register(SubtypeTableViewCell.self , forCellReuseIdentifier: "subtypeCell")
         
         //Table View Constraints
-        homeTableViewTopConstraint.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: homeControllerVariables.barHeight)
-        homeTableView.addConstraint(top: homeTableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
+        tableViewTopConstraint.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: homeControllerVariables.barHeight)
+        homeTableView.addConstraint(top: tableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
+        subtypeTableView.addConstraint(top: tableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
     }
     
     func homeTableViewDatabaseConfigurations() {
@@ -40,13 +45,41 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     //MARK: - Home Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return HomeTitleTableList.cellLabels.count
+        if tableView == homeTableView {
+            return HomeTitleTableList.cellLabels.count
+        }
+        else {
+            return 10
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = homeTableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
-        cell.set(indexPath: indexPath)
-        return cell;
+        if tableView == homeTableView {
+            let cell = homeTableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
+            cell.set(indexPath: indexPath)
+            cell.selectionStyle = .none
+            return cell
+        }
+        else {
+            let cell = subtypeTableView.dequeueReusableCell(withIdentifier: "subtypeCell", for: indexPath) as! SubtypeTableViewCell
+            cell.set(indexPath: indexPath)
+            cell.selectionStyle = .none
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let ref = Database.database().reference()
+//        ref.child(HomeTitleTableList.cellLabels[indexPath.row]).observe(.value, with: { snapshot in
+//        
+//        
+//    })
+        if tableView == homeTableView {
+        subtypeTableView.isHidden = false
+        }
+        else {
+            subtypeTableView.isHidden = true
+        }
     }
     
     //MARK: - Settings Table View Delegate

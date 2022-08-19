@@ -26,7 +26,7 @@ class HomeController: UIViewController {
     let orderBarShadow: UIView = {
         let view = UIView()
         view.backgroundColor = .backgroundWhite
-        view.layer.applyShadow(color: .black, alpha: 0.4, x: 0, y: -1, blur: 20, spread: 0)
+        view.layer.applyShadow(color: .black, alpha: 0.4, x: 0, y: -6, blur: 20, spread: 0)
         return view
     }()
     
@@ -43,7 +43,14 @@ class HomeController: UIViewController {
         return tableView
     }()
     
-    let homeTableViewTopConstraint: UIView = {
+    let subtypeTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .backgroundWhite
+        tableView.isHidden = true
+        return tableView
+    }()
+    
+    let tableViewTopConstraint: UIView = {
         let constraint = UIView()
         constraint.alpha = 0
         return constraint

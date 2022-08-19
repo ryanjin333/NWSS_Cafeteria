@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 struct HomeTitleTableList {
     static var cellLabels = [String]()
