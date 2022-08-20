@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		08AF75F2321DDF43C7AF08C6 /* Pods_NWSS_Cafeteria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D57747C4C00825C376DBA5 /* Pods_NWSS_Cafeteria.framework */; };
-		5737965A28AC99D300527974 /* SubtypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737965928AC99D300527974 /* SubtypeTableViewCell.swift */; };
 		573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C7289D9A920082AC43 /* HomeTableView.swift */; };
 		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
 		573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */; };
@@ -34,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		16D57747C4C00825C376DBA5 /* Pods_NWSS_Cafeteria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWSS_Cafeteria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5737965928AC99D300527974 /* SubtypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtypeTableViewCell.swift; sourceTree = "<group>"; };
 		573808C7289D9A920082AC43 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		573808CB289D9CE90082AC43 /* HomeTitleTableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleTableList.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				573808C7289D9A920082AC43 /* HomeTableView.swift */,
 				573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */,
 				579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */,
-				5737965928AC99D300527974 /* SubtypeTableViewCell.swift */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -363,7 +360,6 @@
 				577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */,
 				577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */,
 				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,
-				5737965A28AC99D300527974 /* SubtypeTableViewCell.swift in Sources */,
 				579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */,
 				573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */,
 				573808CC289D9CE90082AC43 /* HomeTitleTableList.swift in Sources */,
