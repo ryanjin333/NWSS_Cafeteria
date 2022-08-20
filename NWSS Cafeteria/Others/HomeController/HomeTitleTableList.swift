@@ -8,6 +8,8 @@
 import UIKit
 
 struct HomeTitleTableList {
-    static var cellLabels = [String]()
-    let homeHeights: CGFloat = HomeControllerVariables().cellHeight
+    static var sectionLabels = [String]()
+    static var cellLabels = [[String]]()
+    static var cellPictures = [[[String]]]()
+    static var cellPrice = [[[NSNumber]]]()
 }

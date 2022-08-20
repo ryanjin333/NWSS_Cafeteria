@@ -8,7 +8,14 @@
 import UIKit
 
 struct HomeControllerVariables {
-    let barHeight: CGFloat = 125
-    let cellHeight: CGFloat = 80
-    let menuName: String = "Full Menu"
+    
+    //Variables for HomeTableView
+    static let barHeight: CGFloat = 125
+    static let cellHeight: CGFloat = 80
+    static let menuName: String = "Full Menu"
+    
+    //Variables for HomeTableViewCell
+    static let pictureIndex = 0
+    static let priceIndex = 1
+
 }

@@ -43,20 +43,11 @@ class HomeController: UIViewController {
         return tableView
     }()
     
-    let subtypeTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.backgroundColor = .backgroundWhite
-        tableView.isHidden = true
-        return tableView
-    }()
-    
     let tableViewTopConstraint: UIView = {
         let constraint = UIView()
         constraint.alpha = 0
         return constraint
     }()
-    
-    let homeControllerVariables = HomeControllerVariables()
     
     override func viewDidLoad() {
         super.viewDidLoad()
