@@ -29,7 +29,7 @@ extension HomeController {
     func homeTableViewDatabaseConfigurations() {
         
         let ref = Database.database().reference()
-        ref.child(HomeControllerVariables.menuName).observe(.value, with: { snapshot in
+        ref.child(HomeControllerVariables.menuName).observe(.value) { snapshot in
             
             //MARK: Database: First Layer
             var i = 0
@@ -76,7 +76,7 @@ extension HomeController {
                 i += 1
             }
             self.homeTableView.reloadData()
-        })
+        }
     }
 }
 
