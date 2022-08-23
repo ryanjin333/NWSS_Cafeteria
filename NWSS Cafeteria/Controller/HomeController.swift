@@ -49,7 +49,7 @@ class HomeController: UIViewController {
         return constraint
     }()
     
-    var foods = [Food]()
+    var foods: [Food] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

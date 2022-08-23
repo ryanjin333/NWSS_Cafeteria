@@ -27,81 +27,28 @@ extension HomeController {
     }
     
     func homeTableViewDatabaseConfigurations() {
-//        let ref = Database.database().reference()
-//        ref.child(HomeControllerVariables.menuName).observe(.value, with: { snapshot in
-//            
-//            //Fills an empty array within another empty array (Output: 2D Array)
-//            HomeTitleTableList.cellLabels = Array(repeating: [], count: Int(snapshot.childrenCount))
-//            HomeTitleTableList.cellPictures = Array(repeating: [], count: Int(snapshot.childrenCount))
-//            HomeTitleTableList.cellPrice = Array(repeating: [], count: Int(snapshot.childrenCount))
-//            
-//            //MARK: Database: First Layer
-//            var i = 0
-//            for child in snapshot.children {
-//                guard let child = child as? DataSnapshot else { return }
-//                
-//                //Fills an empty array within the 2D empty Array (Output: 3D Array)
-//                HomeTitleTableList.cellPictures[i] = Array(repeating: [], count: Int(child.childrenCount))
-//                HomeTitleTableList.cellPrice[i] = Array(repeating: [], count: Int(child.childrenCount))
-//                
-//                //First Layer Configuration(s)
-//                HomeTitleTableList.sectionLabels.insert(child.key, at: i)
-//                
-//                //MARK: Database: Second Layer
-//                var j = 0
-//                for child in child.children {
-//                    guard let child = child as? DataSnapshot else { return }
-//                    
-//                    //Fills default values within 3D array
-//                    HomeTitleTableList.cellPictures[i][j] = Array(repeating: "", count: Int(child.childrenCount))
-//                    HomeTitleTableList.cellPrice[i][j] = Array(repeating: 0, count: Int(child.childrenCount))
-//                    
-//                    //Second Layer Configuration(s)
-//                    HomeTitleTableList.cellLabels[i].insert(child.key, at: j)
-//                    
-//                    //MARK: Database: Third Layer
-//                    var k = 0
-//                    for child in child.children {
-//                        guard let child = child as? DataSnapshot else { return }
-//                        
-//                        //Third Layer Configuration(s)
-//                        if k == HomeControllerVariables.pictureIndex {
-//                            HomeTitleTableList.cellPictures[i][j].insert(child.value as! String, at: HomeControllerVariables.pictureIndex)
-//                        }
-//                        else {
-//                            HomeTitleTableList.cellPrice[i][j].insert(child.value as! NSNumber, at: HomeControllerVariables.priceIndex)
-//                        }
-//                        k += 1
-//                    }
-//                    j += 1
-//                }
-//                i += 1
-//            }
-//            self.homeTableView.reloadData()
-//        })
         
         let ref = Database.database().reference()
-        ref.child(HomeControllerVariables.menuName).observe(.childAdded, with: { snapshot in
-            //Fills an empty array within another empty array (Output: 2D Array)
+        ref.child(HomeControllerVariables.menuName).observe(.value, with: { snapshot in
             
             //MARK: Database: First Layer
             var i = 0
             for child in snapshot.children {
                 guard let child = child as? DataSnapshot else { return }
                 
-                var sectionLabels: String = child.key
-                var cellLabels: [String] = Array(repeating: "", count: Int(child.childrenCount))
-                var cellPictures: [[String]] = Array(repeating: [], count: Int(child.childrenCount))
-                var cellPrice: [[NSNumber]] = Array(repeating: [], count: Int(child.childrenCount))
+                //Food Variables Created
+                let sectionLabel: String
+                var cellLabels: [String] = []
+                var cellPictures: [String] = []
+                var cellPrice: [NSNumber] = []
+                
+                //First Layer Configuration(s)
+                sectionLabel = child.key
                 
                 //MARK: Database: Second Layer
                 var j = 0
                 for child in child.children {
                     guard let child = child as? DataSnapshot else { return }
-                    
-                    //Fills default values within 3D array                    
-                    cellPictures[j] = Array(repeating: "", count: Int(child.childrenCount))
-                    cellPrice[j] = Array(repeating: 0, count: Int(child.childrenCount))
                     
                     //Second Layer Configuration(s)
                     cellLabels.insert(child.key, at: j)
@@ -111,20 +58,22 @@ extension HomeController {
                     for child in child.children {
                         guard let child = child as? DataSnapshot else { return }
                         
-                        
                         //Third Layer Configuration(s)
                         if k == HomeControllerVariables.pictureIndex {
-                            cellPictures[j].insert(child.value as! String, at: HomeControllerVariables.pictureIndex)
+                            cellPictures.insert(child.value as! String, at: j)
                         }
                         else {
-                            cellPrice[j].insert(child.value as! NSNumber, at: HomeControllerVariables.priceIndex)
-                        }
+                            cellPrice.insert(child.value as! NSNumber, at: j)
+                        } 
                         k += 1
                     }
                     j += 1
                 }
+                self.foods.insert(Food(sectionLabel: sectionLabel, cellLabels: cellLabels, cellPictures: cellPictures, cellPrice: cellPrice), at: i)
+                if self.foods.count > snapshot.childrenCount {
+                    self.foods.remove(at: Int(snapshot.childrenCount))
+                }
                 i += 1
-                self.foods.insert(Food(sectionLabels: sectionLabels, cellLabels: cellLabels, cellPictures: cellPictures, cellPrice: cellPrice), at: i)
             }
             self.homeTableView.reloadData()
         })
@@ -143,7 +92,7 @@ extension HomeController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //return HomeTitleTableList.sectionLabels[section]
-        return foods[section].sectionLabels
+        return foods[section].sectionLabel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

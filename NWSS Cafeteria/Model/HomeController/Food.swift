@@ -8,13 +8,13 @@
 import Foundation
 
 struct Food {
-    var sectionLabels: String
+    var sectionLabel: String
     var cellLabels: [String]
-    var cellPictures: [[String]]
-    var cellPrice: [[NSNumber]]
+    var cellPictures: [String]
+    var cellPrice: [NSNumber]
     
-    init(sectionLabels: String, cellLabels: [String], cellPictures: [[String]], cellPrice: [[NSNumber]]) {
-        self.sectionLabels = sectionLabels
+    init(sectionLabel: String, cellLabels: [String], cellPictures: [String], cellPrice: [NSNumber]) {
+        self.sectionLabel = sectionLabel
         self.cellLabels = cellLabels
         self.cellPictures = cellPictures
         self.cellPrice = cellPrice
