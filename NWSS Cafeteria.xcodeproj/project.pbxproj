@@ -29,6 +29,7 @@
 		579BF6842897437800DC4BAE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF6832897437700DC4BAE /* SettingsController.swift */; };
 		579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF6862897625500DC4BAE /* HelperSettingsController.swift */; };
 		579BF68C2897666D00DC4BAE /* SettingsControllerBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF68B2897666D00DC4BAE /* SettingsControllerBarView.swift */; };
+		57EB8FF828B16DBE0001AB3F /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EB8FF728B16DBE0001AB3F /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		579BF6832897437700DC4BAE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		579BF6862897625500DC4BAE /* HelperSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperSettingsController.swift; sourceTree = "<group>"; };
 		579BF68B2897666D00DC4BAE /* SettingsControllerBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerBarView.swift; sourceTree = "<group>"; };
+		57EB8FF728B16DBE0001AB3F /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		6B3A8E871F5D12B23B986873 /* Pods-NWSS Cafeteria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWSS Cafeteria.debug.xcconfig"; path = "Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria.debug.xcconfig"; sourceTree = "<group>"; };
 		DB203572AAF4178E5E55E10D /* Pods-NWSS Cafeteria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NWSS Cafeteria.release.xcconfig"; path = "Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 		5737965328AC0C5500527974 /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
+				57EB8FF728B16DBE0001AB3F /* Food.swift */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */,
 				579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */,
 				577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */,
+				57EB8FF828B16DBE0001AB3F /* Food.swift in Sources */,
 				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
 				577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */,
 				573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */,

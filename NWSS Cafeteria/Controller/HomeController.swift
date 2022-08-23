@@ -49,6 +49,8 @@ class HomeController: UIViewController {
         return constraint
     }()
     
+    var foods = [Food]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpHomeController()
