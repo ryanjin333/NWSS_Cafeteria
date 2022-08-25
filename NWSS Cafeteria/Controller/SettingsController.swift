@@ -27,7 +27,7 @@ class SettingsController: UIViewController {
     
     let settingsNavigationTitle: UINavigationItem = {
         let navItem = UINavigationItem()
-        navItem.title = "Settings"
+        navItem.title = SettingsControllerVariables.navigationTitle
         return navItem
     }()
     

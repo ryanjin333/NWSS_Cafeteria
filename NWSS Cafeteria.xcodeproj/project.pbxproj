@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		08AF75F2321DDF43C7AF08C6 /* Pods_NWSS_Cafeteria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D57747C4C00825C376DBA5 /* Pods_NWSS_Cafeteria.framework */; };
+		571DB47D28B6DA07004FC579 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB47C28B6DA07004FC579 /* CartController.swift */; };
+		571DB47F28B6F58E004FC579 /* HelperCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB47E28B6F58E004FC579 /* HelperCartController.swift */; };
+		571DB48128B6F638004FC579 /* SettingsControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48028B6F638004FC579 /* SettingsControllerVariables.swift */; };
+		571DB48428B6F710004FC579 /* CartControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48328B6F710004FC579 /* CartControllerVariables.swift */; };
+		571DB48728B6F8CB004FC579 /* CartControllerBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48628B6F8CB004FC579 /* CartControllerBarView.swift */; };
+		571DB48928B6FFD4004FC579 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48828B6FFD4004FC579 /* CartButton.swift */; };
 		573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C7289D9A920082AC43 /* HomeTableView.swift */; };
 		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
 		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
@@ -33,6 +39,13 @@
 
 /* Begin PBXFileReference section */
 		16D57747C4C00825C376DBA5 /* Pods_NWSS_Cafeteria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NWSS_Cafeteria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		571DB47B28B6CF21004FC579 /* NWSS Cafeteria.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NWSS Cafeteria.entitlements"; sourceTree = "<group>"; };
+		571DB47C28B6DA07004FC579 /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
+		571DB47E28B6F58E004FC579 /* HelperCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperCartController.swift; sourceTree = "<group>"; };
+		571DB48028B6F638004FC579 /* SettingsControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerVariables.swift; sourceTree = "<group>"; };
+		571DB48328B6F710004FC579 /* CartControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartControllerVariables.swift; sourceTree = "<group>"; };
+		571DB48628B6F8CB004FC579 /* CartControllerBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartControllerBarView.swift; sourceTree = "<group>"; };
+		571DB48828B6FFD4004FC579 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		573808C7289D9A920082AC43 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
@@ -89,6 +102,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		571DB48228B6F6E1004FC579 /* CartController */ = {
+			isa = PBXGroup;
+			children = (
+				571DB48328B6F710004FC579 /* CartControllerVariables.swift */,
+			);
+			path = CartController;
+			sourceTree = "<group>";
+		};
+		571DB48528B6F8AB004FC579 /* CartController */ = {
+			isa = PBXGroup;
+			children = (
+				571DB48628B6F8CB004FC579 /* CartControllerBarView.swift */,
+			);
+			path = CartController;
+			sourceTree = "<group>";
+		};
 		5737965328AC0C5500527974 /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +144,7 @@
 		573808CE289D9D070082AC43 /* SettingsController */ = {
 			isa = PBXGroup;
 			children = (
+				571DB48028B6F638004FC579 /* SettingsControllerVariables.swift */,
 				579BF67F2897421200DC4BAE /* SettingsTitleTableList.swift */,
 			);
 			path = SettingsController;
@@ -141,6 +171,7 @@
 		577BA254288CD3FB0093D25F /* NWSS Cafeteria */ = {
 			isa = PBXGroup;
 			children = (
+				571DB47B28B6CF21004FC579 /* NWSS Cafeteria.entitlements */,
 				577BA26C288CD9370093D25F /* Helper Methods */,
 				577BA269288CD9000093D25F /* Controller */,
 				577BA26A288CD90F0093D25F /* View */,
@@ -162,6 +193,7 @@
 			children = (
 				577BA259288CD3FB0093D25F /* HomeController.swift */,
 				579BF6832897437700DC4BAE /* SettingsController.swift */,
+				571DB47C28B6DA07004FC579 /* CartController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +203,7 @@
 			children = (
 				579BF689289765F200DC4BAE /* HomeController */,
 				579BF688289765D500DC4BAE /* SettingsController */,
+				571DB48528B6F8AB004FC579 /* CartController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +222,7 @@
 			children = (
 				577BA26D288CE3040093D25F /* HelperHomeController.swift */,
 				579BF6862897625500DC4BAE /* HelperSettingsController.swift */,
+				571DB47E28B6F58E004FC579 /* HelperCartController.swift */,
 			);
 			path = "Helper Methods";
 			sourceTree = "<group>";
@@ -208,6 +242,7 @@
 			children = (
 				573808CD289D9CFD0082AC43 /* HomeController */,
 				573808CE289D9D070082AC43 /* SettingsController */,
+				571DB48228B6F6E1004FC579 /* CartController */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -228,6 +263,7 @@
 				573808C7289D9A920082AC43 /* HomeTableView.swift */,
 				573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */,
 				579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */,
+				571DB48828B6FFD4004FC579 /* CartButton.swift */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -350,9 +386,12 @@
 				579BF6842897437800DC4BAE /* SettingsController.swift in Sources */,
 				579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */,
 				579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */,
+				571DB47D28B6DA07004FC579 /* CartController.swift in Sources */,
 				577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */,
 				57EB8FF828B16DBE0001AB3F /* Food.swift in Sources */,
+				571DB48728B6F8CB004FC579 /* CartControllerBarView.swift in Sources */,
 				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
+				571DB47F28B6F58E004FC579 /* HelperCartController.swift in Sources */,
 				577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */,
 				573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */,
 				577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */,
@@ -360,9 +399,12 @@
 				579BF682289742CB00DC4BAE /* SettingsTableViewCell.swift in Sources */,
 				577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */,
 				577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */,
+				571DB48428B6F710004FC579 /* CartControllerVariables.swift in Sources */,
+				571DB48928B6FFD4004FC579 /* CartButton.swift in Sources */,
 				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,
 				579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */,
 				573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */,
+				571DB48128B6F638004FC579 /* SettingsControllerVariables.swift in Sources */,
 				573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */,
 				579BF68C2897666D00DC4BAE /* SettingsControllerBarView.swift in Sources */,
 			);
@@ -502,6 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NWSS Cafeteria/NWSS Cafeteria.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LKV2ZZV7DJ;
@@ -512,6 +555,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,6 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NWSS Cafeteria/NWSS Cafeteria.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LKV2ZZV7DJ;
@@ -541,6 +586,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
