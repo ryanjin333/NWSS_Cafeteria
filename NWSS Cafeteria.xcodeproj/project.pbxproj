@@ -26,6 +26,7 @@
 		577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA26D288CE3040093D25F /* HelperHomeController.swift */; };
 		577BA271288CE4B70093D25F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA270288CE4B70093D25F /* UIColorExtension.swift */; };
 		577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA272288CE4DA0093D25F /* UIViewExtension.swift */; };
+		5793805B28B86E3900477094 /* PayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793805A28B86E3900477094 /* PayButton.swift */; };
 		579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */; };
 		579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */; };
 		579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */; };
@@ -60,6 +61,7 @@
 		577BA26D288CE3040093D25F /* HelperHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperHomeController.swift; sourceTree = "<group>"; };
 		577BA270288CE4B70093D25F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		577BA272288CE4DA0093D25F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		5793805A28B86E3900477094 /* PayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayButton.swift; sourceTree = "<group>"; };
 		579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerOrderBarView.swift; sourceTree = "<group>"; };
 		579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICALayerExtension.swift; sourceTree = "<group>"; };
 		579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				571DB48628B6F8CB004FC579 /* CartControllerBarView.swift */,
+				5793805A28B86E3900477094 /* PayButton.swift */,
 			);
 			path = CartController;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				579BF682289742CB00DC4BAE /* SettingsTableViewCell.swift in Sources */,
 				577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */,
 				577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */,
+				5793805B28B86E3900477094 /* PayButton.swift in Sources */,
 				571DB48428B6F710004FC579 /* CartControllerVariables.swift in Sources */,
 				571DB48928B6FFD4004FC579 /* CartButton.swift in Sources */,
 				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,

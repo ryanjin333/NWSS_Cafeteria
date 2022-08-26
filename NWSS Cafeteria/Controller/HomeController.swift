@@ -78,8 +78,8 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         setUpHomeController()
         setUpHomeTableView()
-        setUpCartButton()
         homeTableViewDatabaseConfigurations()
+        setUpCartButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {

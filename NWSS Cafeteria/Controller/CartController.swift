@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PassKit
 
 class CartController: UIViewController {
     
@@ -29,9 +30,29 @@ class CartController: UIViewController {
         return barButton
     }()
     
+    let payButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Pay Now", for: .normal)
+        button.backgroundColor = .lightBlue
+        return button
+    }()
+    
+    var paymentRequest: PKPaymentRequest = {
+        let request = PKPaymentRequest()
+        request.merchantIdentifier = "merchant.com.huij.NWSS-Cafeteria"
+        request.supportedNetworks = [.interac, .visa, .masterCard, .discover, .amex]
+        request.supportedCountries = ["CA"]
+        request.merchantCapabilities = .capability3DS
+        request.countryCode = "CA"
+        request.currencyCode = "CAD"
+        request.paymentSummaryItems = [PKPaymentSummaryItem(label: "Foo", amount: 0.10)]
+        return request
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCartController()
         setUpCartBar()
+        setUpPayButton()
     }
 }

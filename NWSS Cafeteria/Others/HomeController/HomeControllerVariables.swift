@@ -17,7 +17,9 @@ struct HomeControllerVariables {
     
     //Variables for HomeTableView
     static let cellHeight: CGFloat = 80
+    static let titleLabelHeight: CGFloat = 0
     static let menuName: String = "Full Menu"
+    static let titleLabelSize: CGFloat = 16
     
     //Variables for HomeTableViewCell
     static let pictureIndex = 0

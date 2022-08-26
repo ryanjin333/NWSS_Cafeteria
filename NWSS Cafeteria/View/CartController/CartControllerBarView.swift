@@ -20,7 +20,6 @@ extension CartController {
         //Constraints
         view.addSubview(cartNavigationBar)
         cartNavigationBar.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
-        
     }
     
 }

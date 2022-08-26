@@ -14,7 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     
     let titleLabel: UILabel = {
        let label = UILabel()
-        label.font = UIFont.init(name: "AvenirNext-Bold", size: 16)
+        label.font = UIFont.init(name: "AvenirNext-Bold", size: HomeControllerVariables.titleLabelSize)
         label.numberOfLines = 0
         return label
     }()
@@ -59,12 +59,8 @@ class HomeTableViewCell: UITableViewCell {
                 self.titleLabel.text = event.cellLabels[indexPath.row]
         self.priceLabel.text = "$\(String(format: "%.2f", Double(truncating: event.cellPrice[indexPath.row])))"
         
-        //Title Label Configurations
-        //let topTitleLabelPadding: CGFloat = (HomeControllerVariables.cellHeight / 2) - ((titleLabel.layer.frame.height + priceLabel.layer.frame.height) / 2)
-        //print((titleLabel.layer.frame.height + priceLabel.layer.frame.height) / 2)
-        
         //Home Table View Cell Constraints
-        titleLabel.addConstraint(top: self.contentView.topAnchor, left: itemImageView.rightAnchor, right: nil, bottom: nil, paddingTop: 20, paddingLeft: 20, paddingRight: 0, paddingBottom: 0, width: 140, height: 0)
+        titleLabel.addConstraint(top: self.contentView.topAnchor, left: itemImageView.rightAnchor, right: cellStepper.leftAnchor, bottom: nil, paddingTop: 15, paddingLeft: 20, paddingRight: 10, paddingBottom: 0, width: 0, height: 0)
         itemImageView.addConstraint(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, right: nil, bottom: nil, paddingTop: 5, paddingLeft: 10, paddingRight: 0, paddingBottom: 0, width: 70, height: 70)
         priceLabel.addConstraint(top: titleLabel.bottomAnchor, left: itemImageView.rightAnchor, right: nil, bottom: nil, paddingTop: 0, paddingLeft: 20, paddingRight: 0, paddingBottom: 0, width: 75, height: 0)
         cellStepper.addConstraint(top: self.contentView.topAnchor, left: nil, right: self.contentView.rightAnchor, bottom: nil, paddingTop: HomeControllerVariables.cellStepperTopPadding, paddingLeft: 0, paddingRight: 30, paddingBottom: 0, width: 100, height: HomeControllerVariables.cellStepperHeight)
