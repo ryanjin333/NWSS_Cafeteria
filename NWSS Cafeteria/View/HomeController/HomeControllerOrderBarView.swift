@@ -24,8 +24,11 @@ extension HomeController {
         //Constraints
         view.addSubview(orderBarShadow)
         view.addSubview(orderNavigationBar)
+        view.addSubview(logo)
         orderBarShadow.addConstraint(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: fullBarHeight)
         orderNavigationBar.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: HomeControllerVariables.barHeight)
+        logo.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: nil, right: nil, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 50, height: 50)
+        logo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
 }

@@ -27,6 +27,9 @@
 		577BA271288CE4B70093D25F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA270288CE4B70093D25F /* UIColorExtension.swift */; };
 		577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA272288CE4DA0093D25F /* UIViewExtension.swift */; };
 		5793805B28B86E3900477094 /* PayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793805A28B86E3900477094 /* PayButton.swift */; };
+		5793806728B9B44A00477094 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806628B9B44A00477094 /* Receipt.swift */; };
+		5793806928B9CD7B00477094 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806828B9CD7B00477094 /* TabBarController.swift */; };
+		5793806B28B9CDB700477094 /* HelperTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806A28B9CDB700477094 /* HelperTabBarController.swift */; };
 		579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */; };
 		579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */; };
 		579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */; };
@@ -62,6 +65,9 @@
 		577BA270288CE4B70093D25F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		577BA272288CE4DA0093D25F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5793805A28B86E3900477094 /* PayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayButton.swift; sourceTree = "<group>"; };
+		5793806628B9B44A00477094 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		5793806828B9CD7B00477094 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5793806A28B9CDB700477094 /* HelperTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTabBarController.swift; sourceTree = "<group>"; };
 		579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerOrderBarView.swift; sourceTree = "<group>"; };
 		579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICALayerExtension.swift; sourceTree = "<group>"; };
 		579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				57EB8FF728B16DBE0001AB3F /* Food.swift */,
+				5793806628B9B44A00477094 /* Receipt.swift */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 				577BA259288CD3FB0093D25F /* HomeController.swift */,
 				579BF6832897437700DC4BAE /* SettingsController.swift */,
 				571DB47C28B6DA07004FC579 /* CartController.swift */,
+				5793806828B9CD7B00477094 /* TabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 				577BA26D288CE3040093D25F /* HelperHomeController.swift */,
 				579BF6862897625500DC4BAE /* HelperSettingsController.swift */,
 				571DB47E28B6F58E004FC579 /* HelperCartController.swift */,
+				5793806A28B9CDB700477094 /* HelperTabBarController.swift */,
 			);
 			path = "Helper Methods";
 			sourceTree = "<group>";
@@ -389,9 +398,11 @@
 				579BF6842897437800DC4BAE /* SettingsController.swift in Sources */,
 				579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */,
 				579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */,
+				5793806928B9CD7B00477094 /* TabBarController.swift in Sources */,
 				571DB47D28B6DA07004FC579 /* CartController.swift in Sources */,
 				577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */,
 				57EB8FF828B16DBE0001AB3F /* Food.swift in Sources */,
+				5793806B28B9CDB700477094 /* HelperTabBarController.swift in Sources */,
 				571DB48728B6F8CB004FC579 /* CartControllerBarView.swift in Sources */,
 				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
 				571DB47F28B6F58E004FC579 /* HelperCartController.swift in Sources */,
@@ -402,6 +413,7 @@
 				579BF682289742CB00DC4BAE /* SettingsTableViewCell.swift in Sources */,
 				577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */,
 				577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */,
+				5793806728B9B44A00477094 /* Receipt.swift in Sources */,
 				5793805B28B86E3900477094 /* PayButton.swift in Sources */,
 				571DB48428B6F710004FC579 /* CartControllerVariables.swift in Sources */,
 				571DB48928B6FFD4004FC579 /* CartButton.swift in Sources */,

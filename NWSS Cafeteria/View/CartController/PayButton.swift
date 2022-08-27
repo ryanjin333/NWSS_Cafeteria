@@ -14,7 +14,8 @@ extension CartController {
         payButton.addTarget(self, action: #selector(payButtonTapped), for: .touchUpInside)
         
         view.addSubview(payButton)
-        payButton.addConstraint(top: nil, left: view.leftAnchor, right: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingTop: 0, paddingLeft: 30, paddingRight: 0, paddingBottom: 200, width: 100, height: 50)
+        payButton.addConstraint(top: nil, left: nil, right: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 50, width: 300, height: 50)
+        payButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
     @objc func payButtonTapped(sender: UIButton!) {

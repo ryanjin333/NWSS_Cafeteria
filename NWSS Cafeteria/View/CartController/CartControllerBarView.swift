@@ -15,7 +15,7 @@ extension CartController {
         
         //Others
         cartNavigationBar.setItems([cartNavigationTitle], animated: false)
-        cartNavigationBar.topItem?.leftBarButtonItem = doneButton
+        //cartNavigationBar.topItem?.leftBarButtonItem = doneButton
         
         //Constraints
         view.addSubview(cartNavigationBar)

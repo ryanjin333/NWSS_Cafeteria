@@ -13,7 +13,7 @@ struct Food {
     var cellPictures: [String]
     var cellPrice: [NSNumber]
     
-    init(sectionLabel: String, cellLabels: [String], cellPictures: [String], cellPrice: [NSNumber]) {
+    init(sectionLabel: String = "", cellLabels: [String] = [], cellPictures: [String] = [], cellPrice: [NSNumber] = []) {
         self.sectionLabel = sectionLabel
         self.cellLabels = cellLabels
         self.cellPictures = cellPictures

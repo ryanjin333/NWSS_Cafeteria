@@ -12,6 +12,9 @@ class CartController: UIViewController {
     
     let cartNavigationBar: UINavigationBar = {
         let navBar = UINavigationBar()
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        navBar.standardAppearance = appearance
         navBar.tintColor = .lightGray
         return navBar
     }()
@@ -22,18 +25,20 @@ class CartController: UIViewController {
         return navItem
     }()
     
-    let doneButton: UIBarButtonItem = {
-        let barButton = UIBarButtonItem()
-        barButton.title = "Back"
-        barButton.action = #selector(doneButtonTapped)
-        barButton.tintColor = .link
-        return barButton
-    }()
+//    let doneButton: UIBarButtonItem = {
+//        let barButton = UIBarButtonItem()
+//        barButton.title = "Back"
+//        barButton.action = #selector(doneButtonTapped)
+//        barButton.tintColor = .link
+//        return barButton
+//    }()
     
     let payButton: UIButton = {
         let button = UIButton()
         button.setTitle("Pay Now", for: .normal)
-        button.backgroundColor = .lightBlue
+        button.backgroundColor = .black
+        button.layer.applyShadow(color: .black, alpha: 0.35, x: 0, y: 4, blur: 11, spread: 0)
+        button.layer.cornerRadius = 10
         return button
     }()
     
@@ -45,7 +50,7 @@ class CartController: UIViewController {
         request.merchantCapabilities = .capability3DS
         request.countryCode = "CA"
         request.currencyCode = "CAD"
-        request.paymentSummaryItems = [PKPaymentSummaryItem(label: "Foo", amount: 0.10)]
+        request.paymentSummaryItems = [PKPaymentSummaryItem(label: "NWSS Cafeteria", amount: 0.10)]
         return request
     }()
     

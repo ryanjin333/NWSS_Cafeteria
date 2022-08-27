@@ -24,6 +24,12 @@ class HomeController: UIViewController {
         return navItem
     }()
     
+    let logo: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "NWSSLogo")
+        return imageView
+    }()
+    
     let orderBarShadow: UIView = {
         let view = UIView()
         view.backgroundColor = .backgroundWhite
@@ -34,28 +40,29 @@ class HomeController: UIViewController {
     let settingsButton: UIBarButtonItem = {
         let barButton = UIBarButtonItem()
         barButton.image = UIImage(systemName: "gearshape.fill")
+        barButton.tintColor = .transparent
         barButton.action = #selector(settingsButtonTapped)
         return barButton
     }()
     
-    let cartButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "cart"), for: .normal)
-        button.setImage(UIImage(named: "cart.fill"), for: .highlighted)
-        button.layer.cornerRadius = 0.5 * HomeControllerVariables.cartButtonLength
-        button.tintColor = .backgroundWhite
-        button.backgroundColor = .transparent
-        button.clipsToBounds = true
-        return button
-    }()
-    
-    let cartButtonShadow: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 0.5 * HomeControllerVariables.cartButtonLength
-        view.layer.applyShadow(color: .black, alpha: 0.35, x: 0, y: 3, blur: 14, spread: 0)
-        view.backgroundColor = .lightBlue
-        return view
-    }()
+//    let cartButton: UIButton = {
+//        let button = UIButton()
+//        button.setImage(UIImage(named: "cart"), for: .normal)
+//        button.setImage(UIImage(named: "cart.fill"), for: .highlighted)
+//        button.layer.cornerRadius = 0.5 * HomeControllerVariables.cartButtonLength
+//        button.tintColor = .backgroundWhite
+//        button.backgroundColor = .transparent
+//        button.clipsToBounds = true
+//        return button
+//    }()
+//    
+//    let cartButtonShadow: UIView = {
+//        let view = UIView()
+//        view.layer.cornerRadius = 0.5 * HomeControllerVariables.cartButtonLength
+//        view.layer.applyShadow(color: .black, alpha: 0.35, x: 0, y: 3, blur: 14, spread: 0)
+//        view.backgroundColor = .transparent
+//        return view
+//    }()
     
     let homeTableView: UITableView = {
         let tableView = UITableView()
@@ -79,7 +86,7 @@ class HomeController: UIViewController {
         setUpHomeController()
         setUpHomeTableView()
         homeTableViewDatabaseConfigurations()
-        setUpCartButton()
+        //setUpCartButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {

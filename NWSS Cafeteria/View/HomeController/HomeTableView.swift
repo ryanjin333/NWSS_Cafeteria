@@ -86,17 +86,14 @@ extension HomeController {
 extension HomeController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //return HomeTitleTableList.sectionLabels.count
         return foods.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //return HomeTitleTableList.sectionLabels[section]
         return foods[section].sectionLabel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return HomeTitleTableList.cellLabels[section].count
         return foods[section].cellLabels.count
     }
     
@@ -104,7 +101,8 @@ extension HomeController: UITableViewDataSource {
             let cell = homeTableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
             
         let food = foods[indexPath.section]
-        cell.set(indexPath: indexPath, with: food)
+        cell.getFood(food: food)
+        cell.set(indexPath: indexPath)
             cell.selectionStyle = .none
             return cell
     }
