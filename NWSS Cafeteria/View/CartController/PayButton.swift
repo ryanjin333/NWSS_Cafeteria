@@ -11,11 +11,16 @@ import PassKit
 extension CartController {
     
     func setUpPayButton() {
+        
+        //General Configurations
+        paymentRequest.paymentSummaryItems = [PKPaymentSummaryItem(label: "NWSS Cafeteria", amount: NSDecimalNumber(value: totalOfOrder))]
+        
+        //Button Setup
         payButton.addTarget(self, action: #selector(payButtonTapped), for: .touchUpInside)
         
+        //Button Constraints
         view.addSubview(payButton)
-        payButton.addConstraint(top: nil, left: nil, right: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 50, width: 300, height: 50)
-        payButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        payButton.addConstraint(top: nil, left: view.leftAnchor, right: view.rightAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingTop: 0, paddingLeft: 20, paddingRight: 20, paddingBottom: 50, width: 0, height: 50)
     }
     
     @objc func payButtonTapped(sender: UIButton!) {

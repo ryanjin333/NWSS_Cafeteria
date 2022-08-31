@@ -13,7 +13,6 @@
 		571DB48128B6F638004FC579 /* SettingsControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48028B6F638004FC579 /* SettingsControllerVariables.swift */; };
 		571DB48428B6F710004FC579 /* CartControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48328B6F710004FC579 /* CartControllerVariables.swift */; };
 		571DB48728B6F8CB004FC579 /* CartControllerBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48628B6F8CB004FC579 /* CartControllerBarView.swift */; };
-		571DB48928B6FFD4004FC579 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DB48828B6FFD4004FC579 /* CartButton.swift */; };
 		573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C7289D9A920082AC43 /* HomeTableView.swift */; };
 		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
 		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
@@ -30,6 +29,10 @@
 		5793806728B9B44A00477094 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806628B9B44A00477094 /* Receipt.swift */; };
 		5793806928B9CD7B00477094 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806828B9CD7B00477094 /* TabBarController.swift */; };
 		5793806B28B9CDB700477094 /* HelperTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806A28B9CDB700477094 /* HelperTabBarController.swift */; };
+		5793806D28BAEF3800477094 /* ReceiptTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806C28BAEF3800477094 /* ReceiptTableView.swift */; };
+		5793806F28BC696F00477094 /* YourOrderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806E28BC696F00477094 /* YourOrderLabel.swift */; };
+		5793807128BC6EC400477094 /* SubtotalAndTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807028BC6EC400477094 /* SubtotalAndTotalView.swift */; };
+		5793807328BDAFB200477094 /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807228BDAFB200477094 /* ReceiptTableViewCell.swift */; };
 		579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */; };
 		579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */; };
 		579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */; };
@@ -49,7 +52,6 @@
 		571DB48028B6F638004FC579 /* SettingsControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerVariables.swift; sourceTree = "<group>"; };
 		571DB48328B6F710004FC579 /* CartControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartControllerVariables.swift; sourceTree = "<group>"; };
 		571DB48628B6F8CB004FC579 /* CartControllerBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartControllerBarView.swift; sourceTree = "<group>"; };
-		571DB48828B6FFD4004FC579 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		573808C7289D9A920082AC43 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
@@ -68,6 +70,10 @@
 		5793806628B9B44A00477094 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		5793806828B9CD7B00477094 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5793806A28B9CDB700477094 /* HelperTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTabBarController.swift; sourceTree = "<group>"; };
+		5793806C28BAEF3800477094 /* ReceiptTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableView.swift; sourceTree = "<group>"; };
+		5793806E28BC696F00477094 /* YourOrderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourOrderLabel.swift; sourceTree = "<group>"; };
+		5793807028BC6EC400477094 /* SubtotalAndTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtotalAndTotalView.swift; sourceTree = "<group>"; };
+		5793807228BDAFB200477094 /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
 		579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerOrderBarView.swift; sourceTree = "<group>"; };
 		579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICALayerExtension.swift; sourceTree = "<group>"; };
 		579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
@@ -123,6 +129,10 @@
 			children = (
 				571DB48628B6F8CB004FC579 /* CartControllerBarView.swift */,
 				5793805A28B86E3900477094 /* PayButton.swift */,
+				5793806C28BAEF3800477094 /* ReceiptTableView.swift */,
+				5793807228BDAFB200477094 /* ReceiptTableViewCell.swift */,
+				5793806E28BC696F00477094 /* YourOrderLabel.swift */,
+				5793807028BC6EC400477094 /* SubtotalAndTotalView.swift */,
 			);
 			path = CartController;
 			sourceTree = "<group>";
@@ -275,7 +285,6 @@
 				573808C7289D9A920082AC43 /* HomeTableView.swift */,
 				573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */,
 				579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */,
-				571DB48828B6FFD4004FC579 /* CartButton.swift */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -396,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				579BF6842897437800DC4BAE /* SettingsController.swift in Sources */,
+				5793807328BDAFB200477094 /* ReceiptTableViewCell.swift in Sources */,
 				579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */,
 				579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */,
 				5793806928B9CD7B00477094 /* TabBarController.swift in Sources */,
@@ -406,17 +416,19 @@
 				571DB48728B6F8CB004FC579 /* CartControllerBarView.swift in Sources */,
 				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
 				571DB47F28B6F58E004FC579 /* HelperCartController.swift in Sources */,
+				5793806F28BC696F00477094 /* YourOrderLabel.swift in Sources */,
 				577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */,
 				573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */,
 				577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */,
+				5793806D28BAEF3800477094 /* ReceiptTableView.swift in Sources */,
 				577BA271288CE4B70093D25F /* UIColorExtension.swift in Sources */,
 				579BF682289742CB00DC4BAE /* SettingsTableViewCell.swift in Sources */,
 				577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */,
+				5793807128BC6EC400477094 /* SubtotalAndTotalView.swift in Sources */,
 				577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */,
 				5793806728B9B44A00477094 /* Receipt.swift in Sources */,
 				5793805B28B86E3900477094 /* PayButton.swift in Sources */,
 				571DB48428B6F710004FC579 /* CartControllerVariables.swift in Sources */,
-				571DB48928B6FFD4004FC579 /* CartButton.swift in Sources */,
 				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,
 				579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */,
 				573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */,

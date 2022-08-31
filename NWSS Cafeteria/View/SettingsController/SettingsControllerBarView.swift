@@ -15,7 +15,6 @@ extension SettingsController {
         
         //Others
         settingsNavigationBar.setItems([settingsNavigationTitle], animated: false)
-        settingsNavigationBar.topItem?.rightBarButtonItem = doneButton
         
         //Constraints
         view.addSubview(settingsNavigationBar)

@@ -31,13 +31,6 @@ class SettingsController: UIViewController {
         return navItem
     }()
     
-    let doneButton: UIBarButtonItem = {
-        let barButton = UIBarButtonItem()
-        barButton.title = "Done"
-        barButton.action = #selector(doneButtonTapped)
-        return barButton
-    }()
-    
     override func viewDidLoad() {
             super.viewDidLoad()
             setUpSettingsController()

@@ -10,6 +10,7 @@ import UIKit
 
 class HomeController: UIViewController {
     
+    //MARK: - Local Closure Variables
     
     let orderNavigationBar: UINavigationBar = {
         let navBar = UINavigationBar()
@@ -45,25 +46,6 @@ class HomeController: UIViewController {
         return barButton
     }()
     
-//    let cartButton: UIButton = {
-//        let button = UIButton()
-//        button.setImage(UIImage(named: "cart"), for: .normal)
-//        button.setImage(UIImage(named: "cart.fill"), for: .highlighted)
-//        button.layer.cornerRadius = 0.5 * HomeControllerVariables.cartButtonLength
-//        button.tintColor = .backgroundWhite
-//        button.backgroundColor = .transparent
-//        button.clipsToBounds = true
-//        return button
-//    }()
-//    
-//    let cartButtonShadow: UIView = {
-//        let view = UIView()
-//        view.layer.cornerRadius = 0.5 * HomeControllerVariables.cartButtonLength
-//        view.layer.applyShadow(color: .black, alpha: 0.35, x: 0, y: 3, blur: 14, spread: 0)
-//        view.backgroundColor = .transparent
-//        return view
-//    }()
-    
     let homeTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .backgroundWhite
@@ -76,7 +58,7 @@ class HomeController: UIViewController {
         return constraint
     }()
     
-    //Variables
+    //MARK: - Local Variables
     let settingsController = SettingsController()
     let cartController = CartController()
     var foods: [Food] = []
@@ -86,7 +68,6 @@ class HomeController: UIViewController {
         setUpHomeController()
         setUpHomeTableView()
         homeTableViewDatabaseConfigurations()
-        //setUpCartButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {

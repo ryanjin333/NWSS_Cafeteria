@@ -25,6 +25,7 @@ struct HomeControllerVariables {
     static let pictureIndex = 0
     static let priceIndex = 1
     static let cellStepperHeight: CGFloat = 30
+    static let itemImageLength: CGFloat = 55
     static let cellStepperTopPadding: CGFloat = cellHeight / 2 - cellStepperHeight / 2 
     
     //Variables for Cart Button

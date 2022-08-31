@@ -15,19 +15,18 @@ extension HomeController {
     func setUpHomeTableView() {
         
         //Table View Initialization
-        view.addSubview(homeTableView)
-        view.addSubview(tableViewTopConstraint)
         homeTableView.dataSource = self
         homeTableView.delegate = self
         homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "homeCell")
         
         //Table View Constraints
+        view.addSubview(homeTableView)
+        view.addSubview(tableViewTopConstraint)
         tableViewTopConstraint.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: HomeControllerVariables.barHeight)
         homeTableView.addConstraint(top: tableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
     }
     
     func homeTableViewDatabaseConfigurations() {
-        
         let ref = Database.database().reference()
         ref.child(HomeControllerVariables.menuName).observe(.value) { snapshot in
             
@@ -98,21 +97,16 @@ extension HomeController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = homeTableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
+        let cell = homeTableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
             
         let food = foods[indexPath.section]
         cell.getFood(food: food)
         cell.set(indexPath: indexPath)
-            cell.selectionStyle = .none
-            return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let ref = Database.database().reference()
-//        ref.child(HomeTitleTableList.cellLabels[indexPath.row]).observe(.value, with: { snapshot in
-//        
-//        
-//    })
+        cell.selectionStyle = .none
+        cell.preservesSuperviewLayoutMargins = false
+//        cell.separatorInset = UIEdgeInsets.init(top: 0.0, left: 0.0, bottom: 0.0, right: 0)
+//        cell.layoutMargins = UIEdgeInsets.init(top: 0.0, left: 0.0, bottom: 0.0, right: 0)
+        return cell
     }
 }
 

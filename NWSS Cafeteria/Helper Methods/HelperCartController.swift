@@ -10,11 +10,16 @@ import UIKit
 extension CartController {
     
     func setUpCartController() {
+        
+        //General Configurations
         view.backgroundColor = .backgroundWhite
     }
     
-//    @objc func doneButtonTapped(sender: UIButton!) {
-//        self.dismiss(animated: true)
-//    }
+    func getTotalOfOrder() {
+        totalOfOrder = 0
+        for (_, food) in HomeTableViewCell.receipt {
+            totalOfOrder += Double(truncating: food.price) * Double(food.amount)
+        }
+    }
     
 }

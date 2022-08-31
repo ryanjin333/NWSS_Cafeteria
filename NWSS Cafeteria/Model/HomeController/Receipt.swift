@@ -8,13 +8,13 @@
 import UIKit
 
 struct Receipt {
-    var name: String
     var price: NSNumber
+    var image: String
     var amount: Int
     
-    init(name: String, price: NSNumber, amount: Int) {
-        self.name = name
+    init(price: NSNumber, image: String, amount: Int) {
         self.price = price
+        self.image = image
         self.amount = amount
     }
     

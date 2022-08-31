@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension TabBarController: UITabBarControllerDelegate {
+extension TabBarController {
     
     func setUpTabBar() {
         
@@ -34,18 +34,21 @@ extension TabBarController: UITabBarControllerDelegate {
         self.viewControllers = controllers
         
         //Tab Bar Attributes
-        tabBar.backgroundColor = .backgroundWhite
-        UITabBar.appearance().barStyle = .default
+        tabBar.standardAppearance.shadowImage = nil
+        tabBar.standardAppearance.shadowColor = nil
+        tabBar.standardAppearance = tabBar.standardAppearance
         let appearance = UITabBarItem.appearance()
         let attributesNormal = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Medium", size: 12)]
         appearance.setTitleTextAttributes(attributesNormal as [NSAttributedString.Key : Any], for: .normal)
         UITabBar.appearance().tintColor = .schoolOrange
-        
-        //MARK: - Delegate
-        func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-                return true
-            }
-        
     }
+}
+
+//MARK: - TabBar Controller Delegate
+
+extension TabBarController: UITabBarControllerDelegate {
     
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+            return true
+        }
 }

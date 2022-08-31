@@ -18,8 +18,7 @@ class HomeTableViewCell: UITableViewCell {
     //MARK: - Local Closure Variables
     let titleLabel: UILabel = {
        let label = UILabel()
-        label.font = UIFont.init(name: "AvenirNext-Bold", size: HomeControllerVariables.titleLabelSize)
-        label.numberOfLines = 0
+        label.font = UIFont.init(name: "AvenirNext-DemiBold", size: HomeControllerVariables.titleLabelSize)
         return label
     }()
     
@@ -60,6 +59,9 @@ class HomeTableViewCell: UITableViewCell {
      
     func set(indexPath: IndexPath) {
         
+        //Variables
+        let itemImageTopConstraint = (HomeControllerVariables.cellHeight / 2) - (HomeControllerVariables.itemImageLength / 2)
+        
         //Home Table View Cell Initialization
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(itemImageView)
@@ -75,9 +77,10 @@ class HomeTableViewCell: UITableViewCell {
         //Stepper Setup
         cellStepper.tag = indexPath.row
         cellStepper.addTarget(self, action: #selector(cellStepperTapped), for: .valueChanged)
+        
         //Home Table View Cell Constraints
-        titleLabel.addConstraint(top: self.contentView.topAnchor, left: itemImageView.rightAnchor, right: cellStepper.leftAnchor, bottom: nil, paddingTop: 15, paddingLeft: 20, paddingRight: 10, paddingBottom: 0, width: 0, height: 0)
-        itemImageView.addConstraint(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, right: nil, bottom: nil, paddingTop: 5, paddingLeft: 10, paddingRight: 0, paddingBottom: 0, width: 70, height: 70)
+        titleLabel.addConstraint(top: self.contentView.topAnchor, left: itemImageView.rightAnchor, right: cellStepper.leftAnchor, bottom: nil, paddingTop: 20, paddingLeft: 20, paddingRight: 10, paddingBottom: 0, width: 0, height: 0)
+        itemImageView.addConstraint(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, right: nil, bottom: nil, paddingTop: itemImageTopConstraint, paddingLeft: 10, paddingRight: 0, paddingBottom: 0, width: HomeControllerVariables.itemImageLength, height: HomeControllerVariables.itemImageLength)
         priceLabel.addConstraint(top: titleLabel.bottomAnchor, left: itemImageView.rightAnchor, right: nil, bottom: nil, paddingTop: 0, paddingLeft: 20, paddingRight: 0, paddingBottom: 0, width: 75, height: 0)
         cellStepper.addConstraint(top: self.contentView.topAnchor, left: nil, right: self.contentView.rightAnchor, bottom: nil, paddingTop: HomeControllerVariables.cellStepperTopPadding, paddingLeft: 0, paddingRight: 30, paddingBottom: 0, width: 100, height: HomeControllerVariables.cellStepperHeight)
     }
@@ -91,10 +94,7 @@ class HomeTableViewCell: UITableViewCell {
             HomeTableViewCell.receipt.removeValue(forKey: food.cellLabels[row])
         }
         else {
-            HomeTableViewCell.receipt[food.cellLabels[row]] = Receipt(name: food.cellLabels[row], price: food.cellPrice[row], amount: value)
-            print("Name: \(HomeTableViewCell.receipt[food.cellLabels[row]]!.name), Price: \(HomeTableViewCell.receipt[food.cellLabels[row]]!.price), Value: \(HomeTableViewCell.receipt[food.cellLabels[row]]!.amount)")
+            HomeTableViewCell.receipt[food.cellLabels[row]] = Receipt(price: food.cellPrice[row], image: food.cellPictures[row], amount: value)
         }
-        print("------------------------------------")
-        print("Receipt: \(HomeTableViewCell.receipt)")
     }
 }
