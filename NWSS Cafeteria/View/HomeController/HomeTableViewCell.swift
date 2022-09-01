@@ -25,6 +25,8 @@ class HomeTableViewCell: UITableViewCell {
     let itemImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 7
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -37,7 +39,7 @@ class HomeTableViewCell: UITableViewCell {
     let cellStepper: GMStepper = {
         let stepper = GMStepper()
         stepper.cornerRadius = 7
-        stepper.labelWidthWeight = 0.4
+        stepper.labelWidthWeight = 0.3
         stepper.labelFont = UIFont(name: "AvenirNext-Medium", size: 16)!
         stepper.labelTextColor = .black
         stepper.labelBackgroundColor = .transparent
@@ -69,7 +71,7 @@ class HomeTableViewCell: UITableViewCell {
         self.contentView.addSubview(cellStepper)
         
         //Set Cell Properties With Firebase
-        let storageRef = Storage.storage().reference(forURL: food.cellPictures[indexPath.row])
+        let storageRef = Storage.storage().reference(forURL: food.cellPictures?[indexPath.row] ?? HomeControllerVariables.nilImage)
         self.itemImageView.sd_setImage(with: storageRef)
         self.titleLabel.text = food.cellLabels[indexPath.row]
         self.priceLabel.text = "$\(String(format: "%.2f", Double(truncating: food.cellPrice[indexPath.row])))"
@@ -77,24 +79,25 @@ class HomeTableViewCell: UITableViewCell {
         //Stepper Setup
         cellStepper.tag = indexPath.row
         cellStepper.addTarget(self, action: #selector(cellStepperTapped), for: .valueChanged)
+
         
         //Home Table View Cell Constraints
         titleLabel.addConstraint(top: self.contentView.topAnchor, left: itemImageView.rightAnchor, right: cellStepper.leftAnchor, bottom: nil, paddingTop: 20, paddingLeft: 20, paddingRight: 10, paddingBottom: 0, width: 0, height: 0)
         itemImageView.addConstraint(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, right: nil, bottom: nil, paddingTop: itemImageTopConstraint, paddingLeft: 10, paddingRight: 0, paddingBottom: 0, width: HomeControllerVariables.itemImageLength, height: HomeControllerVariables.itemImageLength)
         priceLabel.addConstraint(top: titleLabel.bottomAnchor, left: itemImageView.rightAnchor, right: nil, bottom: nil, paddingTop: 0, paddingLeft: 20, paddingRight: 0, paddingBottom: 0, width: 75, height: 0)
-        cellStepper.addConstraint(top: self.contentView.topAnchor, left: nil, right: self.contentView.rightAnchor, bottom: nil, paddingTop: HomeControllerVariables.cellStepperTopPadding, paddingLeft: 0, paddingRight: 30, paddingBottom: 0, width: 100, height: HomeControllerVariables.cellStepperHeight)
+        cellStepper.addConstraint(top: self.contentView.topAnchor, left: nil, right: self.contentView.rightAnchor, bottom: nil, paddingTop: HomeControllerVariables.cellStepperTopPadding, paddingLeft: 0, paddingRight: 30, paddingBottom: 0, width: 120, height: HomeControllerVariables.cellStepperHeight)
     }
     
     @objc func cellStepperTapped(sender: GMStepper) {
-        let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
-        impactGenerator.impactOccurred()
         let row = sender.tag
         let value = Int(sender.value)
+        let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
+        impactGenerator.impactOccurred()
         if value == 0 {
             HomeTableViewCell.receipt.removeValue(forKey: food.cellLabels[row])
         }
         else {
-            HomeTableViewCell.receipt[food.cellLabels[row]] = Receipt(price: food.cellPrice[row], image: food.cellPictures[row], amount: value)
+            HomeTableViewCell.receipt[food.cellLabels[row]] = Receipt(price: food.cellPrice[row], image: food.cellPictures![row], amount: value)
         }
     }
 }

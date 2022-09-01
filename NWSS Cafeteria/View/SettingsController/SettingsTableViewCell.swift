@@ -11,11 +11,14 @@ class SettingsTableViewCell: UITableViewCell {
     
     let settingsTitleLabel: UILabel = {
        let label = UILabel()
-        label.font = UIFont.init(name: "Avenir-Medium", size: 15)
+        label.font = UIFont.init(name: "AvenirNext-Medium", size: 15)
         return label
     }()
     
     func set(indexPath: IndexPath) {
+        
+        //Variables
+        let titleLabelTopConstraint = SettingsControllerVariables.cellHeight / 2 - SettingsControllerVariables.titleLabelHeight / 2
         
         //Settings Table View Cell Initialization
         self.contentView.addSubview(settingsTitleLabel)
@@ -25,7 +28,7 @@ class SettingsTableViewCell: UITableViewCell {
         settingsTitleLabel.text = list.cellLabels[indexPath.section][indexPath.row]
         
         //Settings Table View Cell Constraints
-        settingsTitleLabel.addConstraint(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, right: nil, bottom: nil, paddingTop: 11, paddingLeft: 20, paddingRight: 0, paddingBottom: 0, width: 175, height: 30)
+        settingsTitleLabel.addConstraint(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, right: nil, bottom: nil, paddingTop: titleLabelTopConstraint, paddingLeft: 20, paddingRight: 0, paddingBottom: 0, width: 175, height: SettingsControllerVariables.titleLabelHeight)
     }
     
 }

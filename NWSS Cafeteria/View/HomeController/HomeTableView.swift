@@ -59,7 +59,7 @@ extension HomeController {
                         
                         //Third Layer Configuration(s)
                         if k == HomeControllerVariables.pictureIndex {
-                            cellPictures.insert(child.value as! String, at: j)
+                            child.value as! String != "" ? cellPictures.insert(child.value as! String, at: j) : cellPictures.insert(HomeControllerVariables.nilImage, at: j)
                         }
                         else {
                             cellPrice.insert(child.value as! NSNumber, at: j)

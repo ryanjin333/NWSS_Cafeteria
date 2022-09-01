@@ -10,7 +10,7 @@ import Foundation
 struct Food {
     var sectionLabel: String
     var cellLabels: [String]
-    var cellPictures: [String]
+    var cellPictures: [String]?
     var cellPrice: [NSNumber]
     
     init(sectionLabel: String = "", cellLabels: [String] = [], cellPictures: [String] = [], cellPrice: [NSNumber] = []) {
