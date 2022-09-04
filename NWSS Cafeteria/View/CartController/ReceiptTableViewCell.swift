@@ -62,6 +62,13 @@ class ReceiptTableViewCell: UITableViewCell {
         priceLabel.text = "$\(String(format: "%.2f", itemTotal))"
         amountLabel.text = "x \(HomeTableViewCell.receipt[foodNames[indexPath.row]]!.amount)"
         
+        //Title Label Setup
+        var currentSize = HomeControllerVariables.titleLabelSize
+        while titleLabel.isTruncated == true {
+            currentSize -= 1
+            titleLabel.font = UIFont.init(name: "AvenirNext-DemiBold", size: currentSize)
+        }
+        
         //Constraints
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(itemImageView)
