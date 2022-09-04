@@ -13,8 +13,7 @@ extension HomeController {
     //MARK: - Home Controller Initialization
     
     func setUpHomeController() {
-        
-        view.backgroundColor = .backgroundWhite
+
     }
     
     //MARK: - Home Controller Buttons

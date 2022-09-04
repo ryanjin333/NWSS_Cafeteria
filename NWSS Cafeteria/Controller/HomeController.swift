@@ -16,6 +16,9 @@ class HomeController: UIViewController {
         let navBar = UINavigationBar()
         navBar.backgroundColor = .transparent
         navBar.prefersLargeTitles = true
+        navBar.largeTitleTextAttributes = [
+            .font: UIFont(name: "AvenirNext-DemiBold", size: 29)!
+        ]
         return navBar
     }()
     
@@ -34,7 +37,7 @@ class HomeController: UIViewController {
     let orderBarShadow: UIView = {
         let view = UIView()
         view.backgroundColor = .backgroundWhite
-        view.layer.applyShadow(color: .black, alpha: 0.4, x: 0, y: -6, blur: 20, spread: 0)
+        view.layer.applyShadow(color: .black, alpha: 0.25, x: 0, y: -6, blur: 17, spread: 0)
         return view
     }()
     

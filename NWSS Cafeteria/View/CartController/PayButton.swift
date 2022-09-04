@@ -14,6 +14,14 @@ extension CartController {
         
         //General Configurations
         paymentRequest.paymentSummaryItems = [PKPaymentSummaryItem(label: "NWSS Cafeteria", amount: NSDecimalNumber(value: totalOfOrder))]
+        if totalOfOrder == 0 {
+            payButton.isEnabled = false
+            payButton.backgroundColor = .lightGray
+        }
+        else {
+            payButton.isEnabled = true
+            payButton.backgroundColor = .black
+        }
         
         //Button Setup
         payButton.addTarget(self, action: #selector(payButtonTapped), for: .touchUpInside)
@@ -28,7 +36,7 @@ extension CartController {
         if let controller = controller {
             controller.delegate = self
             present(controller, animated: true) {
-                print("Completed")
+                print(self.paymentRequest.supportedNetworks)
             }
         }
     }
@@ -42,4 +50,6 @@ extension CartController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         completion(PKPaymentAuthorizationResult(status: .success, errors: nil))
     }
+    
+    
 }

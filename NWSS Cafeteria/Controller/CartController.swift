@@ -123,15 +123,13 @@ class CartController: UIViewController {
         label.font = UIFont.init(name: "AvenirNext-Medium", size: 12)
         label.text = CartControllerVariables.scrollDownMessage
         label.textAlignment = .center
-        label.numberOfLines = 0
         return label
     }()
     
     var paymentRequest: PKPaymentRequest = {
         let request = PKPaymentRequest()
         request.merchantIdentifier = "merchant.com.huij.NWSS-Cafeteria"
-        request.supportedNetworks = [.interac, .visa, .masterCard, .discover, .amex]
-        request.supportedCountries = ["CA"]
+        request.supportedNetworks = [.visa, .masterCard, .interac]
         request.merchantCapabilities = .capability3DS
         request.countryCode = "CA"
         request.currencyCode = "CAD"

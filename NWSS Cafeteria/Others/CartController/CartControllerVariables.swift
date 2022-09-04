@@ -18,5 +18,6 @@ class CartControllerVariables {
     static let itemImageLength: CGFloat = 53
     static let priceLabelHeight: CGFloat = 17
     static let scrollDownMessage = "Scroll down for more"
+    static let titleLabelSize: CGFloat = 16
     
 }

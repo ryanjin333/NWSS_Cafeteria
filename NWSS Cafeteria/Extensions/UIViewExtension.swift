@@ -43,6 +43,14 @@ extension UIView {
             heightAnchor.constraint(equalToConstant: height).isActive = true
         }
     }
+    
+    func applyBlurEffect(_ style: UIBlurEffect.Style = .systemChromeMaterial) {
+        let blurEffect = UIBlurEffect(style: .regular)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            addSubview(blurEffectView)
+        }
 }
 
 

@@ -13,7 +13,7 @@ class ReceiptTableViewCell: UITableViewCell {
     //MARK: - Local Closure Variables
     let titleLabel: UILabel = {
        let label = UILabel()
-        label.font = UIFont.init(name: "AvenirNext-DemiBold", size: HomeControllerVariables.titleLabelSize)
+        label.font = UIFont.init(name: "AvenirNext-DemiBold", size: CartControllerVariables.titleLabelSize)
         label.numberOfLines = 0
         return label
     }()
