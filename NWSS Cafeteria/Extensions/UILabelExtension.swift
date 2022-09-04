@@ -7,9 +7,9 @@
 
 import UIKit
 
-extension UIButton {
+extension UILabel {
 
     var isTruncated: Bool {
-        HomeControllerVariables.titleButtonWidth < intrinsicContentSize.width
+        HomeControllerVariables.titleLabelWidth < intrinsicContentSize.width
     }
 }

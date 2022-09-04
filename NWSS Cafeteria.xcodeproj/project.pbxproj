@@ -33,7 +33,7 @@
 		5793806F28BC696F00477094 /* YourOrderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793806E28BC696F00477094 /* YourOrderLabel.swift */; };
 		5793807128BC6EC400477094 /* SubtotalAndTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807028BC6EC400477094 /* SubtotalAndTotalView.swift */; };
 		5793807328BDAFB200477094 /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807228BDAFB200477094 /* ReceiptTableViewCell.swift */; };
-		5793807828C401A000477094 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807728C401A000477094 /* UIButtonExtension.swift */; };
+		5793807828C401A000477094 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807728C401A000477094 /* UILabelExtension.swift */; };
 		579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */; };
 		579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */; };
 		579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */; };
@@ -75,7 +75,7 @@
 		5793806E28BC696F00477094 /* YourOrderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourOrderLabel.swift; sourceTree = "<group>"; };
 		5793807028BC6EC400477094 /* SubtotalAndTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtotalAndTotalView.swift; sourceTree = "<group>"; };
 		5793807228BDAFB200477094 /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
-		5793807728C401A000477094 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		5793807728C401A000477094 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerOrderBarView.swift; sourceTree = "<group>"; };
 		579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICALayerExtension.swift; sourceTree = "<group>"; };
 		579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 				577BA270288CE4B70093D25F /* UIColorExtension.swift */,
 				577BA272288CE4DA0093D25F /* UIViewExtension.swift */,
 				579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */,
-				5793807728C401A000477094 /* UIButtonExtension.swift */,
+				5793807728C401A000477094 /* UILabelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -416,7 +416,7 @@
 				577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */,
 				57EB8FF828B16DBE0001AB3F /* Food.swift in Sources */,
 				5793806B28B9CDB700477094 /* HelperTabBarController.swift in Sources */,
-				5793807828C401A000477094 /* UIButtonExtension.swift in Sources */,
+				5793807828C401A000477094 /* UILabelExtension.swift in Sources */,
 				571DB48728B6F8CB004FC579 /* CartControllerBarView.swift in Sources */,
 				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
 				571DB47F28B6F58E004FC579 /* HelperCartController.swift in Sources */,
