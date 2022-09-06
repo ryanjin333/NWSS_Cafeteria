@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Stripe
+import Alamofire
 import FirebaseCore
 
 @main
@@ -14,9 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         FirebaseApp.configure()
-        
+        StripeAPI.defaultPublishableKey = "pk_test_51LeQb7Bx99kDZR9Wp3qyCGPWXoSfSIaOHrojGLTNWVHE3LTodYsBYXBpl8YiDqzvKojoi7T67ZeQtLapjTFcWfD800TSorlFSn"
         return true
     }
 

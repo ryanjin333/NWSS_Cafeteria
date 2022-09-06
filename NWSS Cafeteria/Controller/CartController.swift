@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Stripe
 import PassKit
 
 class CartController: UIViewController {
@@ -26,9 +27,20 @@ class CartController: UIViewController {
         return navItem
     }()
     
+    let createCustomerButton: UIButton = {
+        let button = UIButton()
+        let buttonTitle = "Create Customer"
+        button.setTitle(buttonTitle, for: .normal)
+        button.backgroundColor = .black
+        button.layer.applyShadow(color: .black, alpha: 0.5, x: 0, y: 3, blur: 8, spread: 0)
+        button.layer.cornerRadius = 10
+        return button
+    }()
+    
     let payButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Pay Now", for: .normal)
+        let buttonTitle = "Pay Now"
+        button.setTitle(buttonTitle, for: .normal)
         button.backgroundColor = .black
         button.layer.applyShadow(color: .black, alpha: 0.5, x: 0, y: 3, blur: 8, spread: 0)
         button.layer.cornerRadius = 10
@@ -126,18 +138,11 @@ class CartController: UIViewController {
         return label
     }()
     
-    var paymentRequest: PKPaymentRequest = {
-        let request = PKPaymentRequest()
-        request.merchantIdentifier = "merchant.com.huij.NWSS-Cafeteria"
-        request.supportedNetworks = [.visa, .masterCard, .interac]
-        request.merchantCapabilities = .capability3DS
-        request.countryCode = "CA"
-        request.currencyCode = "CAD"
-        return request
-    }()
-    
     //MARK: - Local Variables
     var totalOfOrder: Double = 0
+    var customerContext: STPCustomerContext?
+    var paymentContext: STPPaymentContext?
+    var isPayButtonTapped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
