@@ -35,6 +35,11 @@
 		5793807828C401A000477094 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807728C401A000477094 /* UILabelExtension.swift */; };
 		5793807A28C5986F00477094 /* PayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807928C5986F00477094 /* PayButton.swift */; };
 		5793808028C6F96000477094 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793807F28C6F96000477094 /* APIClient.swift */; };
+		5793808228C7D19100477094 /* PaymentSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793808128C7D19100477094 /* PaymentSuccessController.swift */; };
+		5793808528C96AAC00477094 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793808428C96AAC00477094 /* ClientView.swift */; };
+		5793808728C973FD00477094 /* RestartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793808628C973FD00477094 /* RestartButtonView.swift */; };
+		5793808928C97A7C00477094 /* HelperPaymentSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793808828C97A7C00477094 /* HelperPaymentSuccessController.swift */; };
+		5793808B28C9884A00477094 /* PaymentStatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5793808A28C9884A00477094 /* PaymentStatusIndicatorView.swift */; };
 		579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */; };
 		579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */; };
 		579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */; };
@@ -78,6 +83,11 @@
 		5793807728C401A000477094 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		5793807928C5986F00477094 /* PayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayButton.swift; sourceTree = "<group>"; };
 		5793807F28C6F96000477094 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5793808128C7D19100477094 /* PaymentSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessController.swift; sourceTree = "<group>"; };
+		5793808428C96AAC00477094 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		5793808628C973FD00477094 /* RestartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartButtonView.swift; sourceTree = "<group>"; };
+		5793808828C97A7C00477094 /* HelperPaymentSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperPaymentSuccessController.swift; sourceTree = "<group>"; };
+		5793808A28C9884A00477094 /* PaymentStatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusIndicatorView.swift; sourceTree = "<group>"; };
 		579BF67928963C6800DC4BAE /* HomeControllerOrderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerOrderBarView.swift; sourceTree = "<group>"; };
 		579BF67B28963EB600DC4BAE /* UICALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICALayerExtension.swift; sourceTree = "<group>"; };
 		579BF67D2896FC6500DC4BAE /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 				5793806E28BC696F00477094 /* YourOrderLabel.swift */,
 				5793807028BC6EC400477094 /* SubtotalAndTotalView.swift */,
 				5793807928C5986F00477094 /* PayButton.swift */,
+				5793808A28C9884A00477094 /* PaymentStatusIndicatorView.swift */,
 			);
 			path = CartController;
 			sourceTree = "<group>";
@@ -219,6 +230,7 @@
 				579BF6832897437700DC4BAE /* SettingsController.swift */,
 				571DB47C28B6DA07004FC579 /* CartController.swift */,
 				5793806828B9CD7B00477094 /* TabBarController.swift */,
+				5793808128C7D19100477094 /* PaymentSuccessController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +241,7 @@
 				579BF689289765F200DC4BAE /* HomeController */,
 				579BF688289765D500DC4BAE /* SettingsController */,
 				571DB48528B6F8AB004FC579 /* CartController */,
+				5793808328C96A0D00477094 /* PaymentSuccessController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +263,7 @@
 				579BF6862897625500DC4BAE /* HelperSettingsController.swift */,
 				571DB47E28B6F58E004FC579 /* HelperCartController.swift */,
 				5793806A28B9CDB700477094 /* HelperTabBarController.swift */,
+				5793808828C97A7C00477094 /* HelperPaymentSuccessController.swift */,
 			);
 			path = "Helper Methods";
 			sourceTree = "<group>";
@@ -271,6 +285,15 @@
 				5793807F28C6F96000477094 /* APIClient.swift */,
 			);
 			path = CartController;
+			sourceTree = "<group>";
+		};
+		5793808328C96A0D00477094 /* PaymentSuccessController */ = {
+			isa = PBXGroup;
+			children = (
+				5793808428C96AAC00477094 /* ClientView.swift */,
+				5793808628C973FD00477094 /* RestartButtonView.swift */,
+			);
+			path = PaymentSuccessController;
 			sourceTree = "<group>";
 		};
 		579BF6852897536800DC4BAE /* Others */ = {
@@ -420,7 +443,9 @@
 			files = (
 				579BF6842897437800DC4BAE /* SettingsController.swift in Sources */,
 				5793808028C6F96000477094 /* APIClient.swift in Sources */,
+				5793808B28C9884A00477094 /* PaymentStatusIndicatorView.swift in Sources */,
 				5793807328BDAFB200477094 /* ReceiptTableViewCell.swift in Sources */,
+				5793808928C97A7C00477094 /* HelperPaymentSuccessController.swift in Sources */,
 				579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */,
 				579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */,
 				5793806928B9CD7B00477094 /* TabBarController.swift in Sources */,
@@ -432,12 +457,15 @@
 				571DB48728B6F8CB004FC579 /* CartControllerBarView.swift in Sources */,
 				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
 				571DB47F28B6F58E004FC579 /* HelperCartController.swift in Sources */,
+				5793808728C973FD00477094 /* RestartButtonView.swift in Sources */,
 				5793806F28BC696F00477094 /* YourOrderLabel.swift in Sources */,
 				577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */,
 				573808C8289D9A920082AC43 /* HomeTableView.swift in Sources */,
+				5793808228C7D19100477094 /* PaymentSuccessController.swift in Sources */,
 				577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */,
 				5793806D28BAEF3800477094 /* ReceiptTableView.swift in Sources */,
 				5793807A28C5986F00477094 /* PayButton.swift in Sources */,
+				5793808528C96AAC00477094 /* ClientView.swift in Sources */,
 				577BA271288CE4B70093D25F /* UIColorExtension.swift in Sources */,
 				579BF682289742CB00DC4BAE /* SettingsTableViewCell.swift in Sources */,
 				577BA26E288CE3040093D25F /* HelperHomeController.swift in Sources */,

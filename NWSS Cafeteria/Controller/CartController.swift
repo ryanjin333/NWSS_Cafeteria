@@ -130,6 +130,21 @@ class CartController: UIViewController {
         return label
     }()
     
+    let paymentStatusIndicatorView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = CartControllerVariables.paymentStatusIndicatorViewCornerRadius
+        view.applyProminentBlurEffect()
+        view.isHidden = true
+        return view
+    }()
+    
+    let paymentStatusIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.tintColor = .black
+        activityIndicator.backgroundColor = .clear
+        return activityIndicator
+    }()
+    
     var scrollDownLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.init(name: "AvenirNext-Medium", size: 12)
@@ -156,5 +171,6 @@ class CartController: UIViewController {
         setUpRecieptTableView()
         setUpSubtotalAndTotalView()
         setUpPayButton()
+        setUpPaymentStatusIndicatorView()
     }
 }

@@ -23,7 +23,7 @@ class APIClient: NSObject, STPCustomerEphemeralKeyProvider {
                 }
     }
     
-    class func createCustomer(){
+    class func createCustomer() {
             
             var customerDetailParams = [String : String]()
             customerDetailParams["email"] = "tes675t@gmail.com"
@@ -34,6 +34,7 @@ class APIClient: NSObject, STPCustomerEphemeralKeyProvider {
                 switch response.result {
                     case .success(_):
                         debugPrint(response.data!)
+                        print()
                     case .failure(_):
                         debugPrint(response.error!)
                         debugPrint(response.debugDescription)
@@ -41,7 +42,7 @@ class APIClient: NSObject, STPCustomerEphemeralKeyProvider {
             }
         }
     
-    class func createPaymentIntent(amount:Double,currency:String,customerId:String,completion:@escaping (Result<String, Error>)->Void){
+    class func createPaymentIntent(amount:Double,currency:String,customerId:String,completion:@escaping (Result<String, Error>)->Void) {
             //        createpaymentintent.php
             AF.request(URL(string: "http://10.0.0.33:8888/StripeBackend/createpaymentintent.php")!, method: .post, parameters: ["amount": amount,"currency": currency,"customerId": customerId], encoding: URLEncoding.default, headers: nil).responseData { (response) in
                 switch response.result {

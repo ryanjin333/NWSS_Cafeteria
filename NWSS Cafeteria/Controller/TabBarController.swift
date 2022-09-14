@@ -9,6 +9,8 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    static var tabBarController: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTabBar()

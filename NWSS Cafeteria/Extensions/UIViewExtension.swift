@@ -44,13 +44,23 @@ extension UIView {
         }
     }
     
-    func applyBlurEffect(_ style: UIBlurEffect.Style = .systemChromeMaterial) {
+    func applyBlurEffect() {
         let blurEffect = UIBlurEffect(style: .regular)
-            let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            blurEffectView.frame = bounds
-            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            addSubview(blurEffectView)
-        }
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(blurEffectView)
+    }
+    
+    func applyProminentBlurEffect() {
+        let blurEffect = UIBlurEffect(style: .prominent)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        blurEffectView.layer.cornerRadius = CartControllerVariables.paymentStatusIndicatorViewCornerRadius
+        blurEffectView.layer.masksToBounds = true
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(blurEffectView)
+    }
 }
 
 

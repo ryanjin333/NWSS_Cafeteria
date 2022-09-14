@@ -41,6 +41,10 @@ extension TabBarController {
         let attributesNormal = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Medium", size: 12)]
         appearance.setTitleTextAttributes(attributesNormal as [NSAttributedString.Key : Any], for: .normal)
         UITabBar.appearance().tintColor = .schoolOrange
+        
+        //Create an instance of the controller so that other controllers can disable the tab bar
+        TabBarController.tabBarController = self
+        
     }
 }
 

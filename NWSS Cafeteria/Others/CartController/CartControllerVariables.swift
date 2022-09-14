@@ -20,4 +20,7 @@ class CartControllerVariables {
     static let scrollDownMessage = "Scroll down for more"
     static let titleLabelSize: CGFloat = 16
     
+    //Variables for Payment Status Indicator View
+    static let paymentStatusIndicatorViewCornerRadius:CGFloat = 11
+    
 }

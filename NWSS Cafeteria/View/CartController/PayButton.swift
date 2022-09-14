@@ -11,6 +11,7 @@ import PassKit
 
 extension CartController {
     
+    
     func setUpPayButton() {
         
         //Pay Button Configurations
@@ -24,6 +25,8 @@ extension CartController {
             payButton.isEnabled = true
             payButton.backgroundColor = .black
         }
+    
+        
         let config = STPPaymentConfiguration.shared
         config.applePayEnabled = true
         config.requiredShippingAddressFields = nil
@@ -56,15 +59,42 @@ extension CartController: STPPaymentContextDelegate {
     
     func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
         if isPayButtonTapped {
+            
+            //Set Controller in a Disabled State
+            createCustomerButton.backgroundColor = .lightGray
+            payButton.backgroundColor = .lightGray
+            UITabBar.appearance().tintColor = .lightGray
+            self.view.isUserInteractionEnabled = false
+            TabBarController.tabBarController?.view.isUserInteractionEnabled = false
+            paymentStatusIndicatorView.isHidden = false
+            paymentStatusIndicator.startAnimating()
+            
+            //If in disabled state for a prolonged amount of time
+            Timer.scheduledTimer(withTimeInterval: 8, repeats: false) { _ in 
+                self.paymentStatusIndicatorView.isHidden = true
+                self.paymentStatusIndicator.stopAnimating()
+                self.createCustomerButton.backgroundColor = .black
+                self.view.isUserInteractionEnabled = true
+                UITabBar.appearance().tintColor = .schoolOrange
+                TabBarController.tabBarController?.view.isUserInteractionEnabled = true
+                self.isPayButtonTapped = false
+            }
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-             self.paymentContext?.requestPayment()
-             self.isPayButtonTapped = false
+                self.isPayButtonTapped = false
+                self.paymentContext?.requestPayment()
             }
         }
     }
     
     func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
-        debugPrint(error)
+        paymentStatusIndicatorView.isHidden = true
+        paymentStatusIndicator.stopAnimating()
+        createCustomerButton.backgroundColor = .black
+        self.view.isUserInteractionEnabled = true
+        UITabBar.appearance().tintColor = .schoolOrange
+        TabBarController.tabBarController?.view.isUserInteractionEnabled = true
+        self.isPayButtonTapped = false
     }
     
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {
@@ -85,6 +115,11 @@ extension CartController: STPPaymentContextDelegate {
                                 completion(.error, error) // Report error
                             case .canceled:
                                 completion(.userCancellation, nil) // Customer cancelled
+                                self.paymentStatusIndicatorView.isHidden = true
+                                self.paymentStatusIndicator.stopAnimating()
+                                self.createCustomerButton.tintColor = .black
+                                self.view.isUserInteractionEnabled = true
+                                TabBarController.tabBarController?.view.isUserInteractionEnabled = true
                             @unknown default:
                                 completion(.error, nil)
                             }
@@ -98,5 +133,24 @@ extension CartController: STPPaymentContextDelegate {
     
     func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
         
+        //Reset View
+        let paymentSuccessController = PaymentSuccessController()
+        paymentStatusIndicatorView.isHidden = true
+        paymentStatusIndicator.stopAnimating()
+        createCustomerButton.backgroundColor = .black
+        self.view.isUserInteractionEnabled = true
+        UITabBar.appearance().tintColor = .schoolOrange
+        TabBarController.tabBarController?.view.isUserInteractionEnabled = true
+        self.isPayButtonTapped = false
+        
+        //Reset Variables
+        totalOfOrder = 0
+        HomeTableViewCell.receipt = [:]
+        
+        //Segue
+        paymentSuccessController.modalPresentationStyle = .fullScreen
+        present(paymentSuccessController, animated: true)
     }
+    
+    
 }

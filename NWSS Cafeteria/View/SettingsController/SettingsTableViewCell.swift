@@ -11,7 +11,7 @@ class SettingsTableViewCell: UITableViewCell {
     
     let settingsTitleLabel: UILabel = {
        let label = UILabel()
-        label.font = UIFont.init(name: "AvenirNext-Medium", size: 15)
+        label.font = UIFont.init(name: "AvenirNext-DemiBold", size: 15)
         return label
     }()
     

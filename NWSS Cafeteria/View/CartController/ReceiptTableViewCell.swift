@@ -65,7 +65,7 @@ class ReceiptTableViewCell: UITableViewCell {
         //Title Label Setup
         var currentSize = HomeControllerVariables.titleLabelSize
         while titleLabel.isTruncated == true {
-            currentSize -= 1
+            currentSize -= 0.5
             titleLabel.font = UIFont.init(name: "AvenirNext-DemiBold", size: currentSize)
         }
         
