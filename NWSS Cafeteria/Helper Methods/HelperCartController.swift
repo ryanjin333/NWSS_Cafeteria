@@ -17,8 +17,19 @@ extension CartController {
     
     func getTotalOfOrder() {
         totalOfOrder = 0
-        for (_, food) in HomeTableViewCell.receipt {
-            totalOfOrder += Double(truncating: food.price) * Double(food.amount)
+        HomeTableViewCell.receipt.forEach {
+            let itemTotal = Double(truncating: $1.price) * Double($1.amount)
+            totalOfOrder += itemTotal
+        }
+    }
+    
+    func getPaymentDescription() {
+        paymentDescription = ""
+        HomeTableViewCell.receipt.forEach {
+            paymentDescription += "\($1.amount) x \($0), "
+        }
+        if paymentDescription != "" {
+            paymentDescription.removeLast(2)
         }
     }
     

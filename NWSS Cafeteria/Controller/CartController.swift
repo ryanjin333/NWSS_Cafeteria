@@ -154,10 +154,11 @@ class CartController: UIViewController {
     }()
     
     //MARK: - Local Variables
-    var totalOfOrder: Double = 0
+    var totalOfOrder = Double()
     var customerContext: STPCustomerContext?
     var paymentContext: STPPaymentContext?
-    var isPayButtonTapped = false
+    var isPayButtonTapped = Bool()
+    var paymentDescription = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,11 +167,13 @@ class CartController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getTotalOfOrder()
+        getPaymentDescription()
         setUpCartBar()
         setUpYourOrderLabel()
         setUpRecieptTableView()
         setUpSubtotalAndTotalView()
         setUpPayButton()
+        setUpCreateCustomerButton()
         setUpPaymentStatusIndicatorView()
     }
 }

@@ -17,6 +17,7 @@
 		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
 		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
 		573808D628A87D6E0082AC43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 573808D528A87D6E0082AC43 /* GoogleService-Info.plist */; };
+		575F412228D69BC70036C995 /* CreateCustomerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F412128D69BC70036C995 /* CreateCustomerButton.swift */; };
 		577BA256288CD3FB0093D25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA255288CD3FB0093D25F /* AppDelegate.swift */; };
 		577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA257288CD3FB0093D25F /* SceneDelegate.swift */; };
 		577BA25A288CD3FB0093D25F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BA259288CD3FB0093D25F /* HomeController.swift */; };
@@ -63,6 +64,7 @@
 		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
 		573808D528A87D6E0082AC43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		575F412128D69BC70036C995 /* CreateCustomerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerButton.swift; sourceTree = "<group>"; };
 		577BA252288CD3FB0093D25F /* NWSS Cafeteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NWSS Cafeteria.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577BA255288CD3FB0093D25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577BA257288CD3FB0093D25F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				5793807228BDAFB200477094 /* ReceiptTableViewCell.swift */,
 				5793806E28BC696F00477094 /* YourOrderLabel.swift */,
 				5793807028BC6EC400477094 /* SubtotalAndTotalView.swift */,
+				575F412128D69BC70036C995 /* CreateCustomerButton.swift */,
 				5793807928C5986F00477094 /* PayButton.swift */,
 				5793808A28C9884A00477094 /* PaymentStatusIndicatorView.swift */,
 			);
@@ -338,6 +341,7 @@
 				577BA24F288CD3FB0093D25F /* Frameworks */,
 				577BA250288CD3FB0093D25F /* Resources */,
 				C89DF9D5814F4667B307F7FA /* [CP] Embed Pods Frameworks */,
+				17677A6A776D9951FC89BD48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -395,6 +399,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17677A6A776D9951FC89BD48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NWSS Cafeteria/Pods-NWSS Cafeteria-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BA6A19FB8488B0CF654A78C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +470,7 @@
 				579BF67A28963C6800DC4BAE /* HomeControllerOrderBarView.swift in Sources */,
 				579BF67E2896FC6500DC4BAE /* SettingsTableView.swift in Sources */,
 				5793806928B9CD7B00477094 /* TabBarController.swift in Sources */,
+				575F412228D69BC70036C995 /* CreateCustomerButton.swift in Sources */,
 				571DB47D28B6DA07004FC579 /* CartController.swift in Sources */,
 				577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */,
 				57EB8FF828B16DBE0001AB3F /* Food.swift in Sources */,
