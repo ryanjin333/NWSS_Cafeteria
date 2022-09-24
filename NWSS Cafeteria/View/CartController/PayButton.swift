@@ -8,6 +8,7 @@
 import UIKit
 import Stripe
 import PassKit
+import FirebaseAuth
 
 extension CartController {
     
@@ -24,7 +25,6 @@ extension CartController {
             payButton.isEnabled = true
             payButton.backgroundColor = .black
         }
-    
         
         let config = STPPaymentConfiguration.shared
         config.requiredShippingAddressFields = nil
@@ -53,7 +53,7 @@ extension CartController: STPPaymentContextDelegate {
             
             DispatchQueue.main.async {
                 //Set Controller in a Disabled State
-                self.createCustomerButton.backgroundColor = .lightGray
+                self.userInfoButton.backgroundColor = .lightGray
                 self.payButton.backgroundColor = .lightGray
                 UITabBar.appearance().tintColor = .lightGray
                 self.view.isUserInteractionEnabled = false
@@ -65,7 +65,7 @@ extension CartController: STPPaymentContextDelegate {
                 Timer.scheduledTimer(withTimeInterval: 8, repeats: false) { _ in 
                     self.paymentStatusIndicatorView.isHidden = true
                     self.paymentStatusIndicator.stopAnimating()
-                    self.createCustomerButton.backgroundColor = .black
+                    self.userInfoButton.backgroundColor = .black
                     self.payButton.backgroundColor = .black
                     self.view.isUserInteractionEnabled = true
                     UITabBar.appearance().tintColor = .schoolOrange
@@ -83,7 +83,7 @@ extension CartController: STPPaymentContextDelegate {
     func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
         paymentStatusIndicatorView.isHidden = true
         paymentStatusIndicator.stopAnimating()
-        createCustomerButton.backgroundColor = .black
+        userInfoButton.backgroundColor = .black
         payButton.backgroundColor = .black
         self.view.isUserInteractionEnabled = true
         UITabBar.appearance().tintColor = .schoolOrange
@@ -92,7 +92,11 @@ extension CartController: STPPaymentContextDelegate {
     }
     
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {
-        APIClient.createPaymentIntent(amount: (Double(paymentContext.paymentAmount)), currency: "cad", customerId: "bruh", description: paymentDescription) { (response) in
+        guard let currentUser = FirebaseAuth.Auth.auth().currentUser?.uid else {
+            print("No current user")
+            return
+        }
+        APIClient.createPaymentIntent(amount: (Double(paymentContext.paymentAmount)), currency: "cad", customerId: currentUser, description: paymentDescription) { (response) in
                     switch response {
                     case .success(let clientSecret):
                         // Assemble the PaymentIntent parameters
@@ -127,7 +131,7 @@ extension CartController: STPPaymentContextDelegate {
             let paymentSuccessController = PaymentSuccessController()
             paymentStatusIndicatorView.isHidden = true
             paymentStatusIndicator.stopAnimating()
-            createCustomerButton.backgroundColor = .black
+            userInfoButton.backgroundColor = .black
             payButton.backgroundColor = .black
             self.view.isUserInteractionEnabled = true
             UITabBar.appearance().tintColor = .schoolOrange
@@ -145,7 +149,7 @@ extension CartController: STPPaymentContextDelegate {
         else {
             paymentStatusIndicatorView.isHidden = true
             paymentStatusIndicator.stopAnimating()
-            createCustomerButton.backgroundColor = .black
+            userInfoButton.backgroundColor = .black
             payButton.backgroundColor = .black
             self.view.isUserInteractionEnabled = true
             UITabBar.appearance().tintColor = .schoolOrange

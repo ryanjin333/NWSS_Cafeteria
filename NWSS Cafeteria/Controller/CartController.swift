@@ -8,34 +8,15 @@
 import UIKit
 import Stripe
 import PassKit
+import FirebaseAuth
 
 class CartController: UIViewController {
     
     //MARK: - Local Closure Variables
     
-    let cartNavigationBar: UINavigationBar = {
-        let navBar = UINavigationBar()
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        navBar.standardAppearance = appearance
-        navBar.tintColor = .lightGray
-        return navBar
-    }()
+    let cartNavigationBar = CartNavigationBarView()
     
-    let cartNavigationTitle: UINavigationItem = {
-        let navItem = UINavigationItem()
-        return navItem
-    }()
-    
-    let createCustomerButton: UIButton = {
-        let button = UIButton()
-        let buttonTitle = "Create Customer"
-        button.setTitle(buttonTitle, for: .normal)
-        button.backgroundColor = .black
-        button.layer.applyShadow(color: .black, alpha: 0.5, x: 0, y: 3, blur: 8, spread: 0)
-        button.layer.cornerRadius = 10
-        return button
-    }()
+    let userInfoButton = UserInfoButton()
     
     let payButton: UIButton = {
         let button = UIButton()
@@ -168,12 +149,63 @@ class CartController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         getTotalOfOrder()
         getPaymentDescription()
-        setUpCartBar()
+        setupCartBar()
+        setupUserInfoButton()
         setUpYourOrderLabel()
         setUpRecieptTableView()
         setUpSubtotalAndTotalView()
         setUpPayButton()
-        setUpCreateCustomerButton()
         setUpPaymentStatusIndicatorView()
     }
+    
+    //MARK: - Cart Bar Initialization
+    
+    func setupCartBar() {
+        
+        //Variables
+        var totalNumberOfItems = 0
+        HomeTableViewCell.receipt.values.forEach {
+            totalNumberOfItems += $0.amount
+        }
+        let navbarTitle = "Cart (\(totalNumberOfItems))"
+        
+        //Navigation Bar Attributes
+        cartNavigationBar.setInfo(navbarTitle: navbarTitle)
+        
+        //Constraints
+        view.addSubview(cartNavigationBar)
+        cartNavigationBar.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
+    }
+    
+    //MARK: - Login Button Initialization
+    func setupUserInfoButton() {
+        
+        //Variables
+        let userInfoLabelText = "User"
+        let userInfoImageName = "userInfoIcon"
+        
+        //Create Customer Button Configurations
+        userInfoButton.tappableButton.addTarget(self, action: #selector(userInfoButtonTapped), for: .touchUpInside)
+        
+        //Button Attributes
+        userInfoButton.userInfoImageView.image = UIImage(named: userInfoImageName)
+        userInfoButton.userInfoLabel.text = userInfoLabelText
+            
+        //Constraints
+        view.addSubview(userInfoButton)
+        userInfoButton.addConstraint(top: cartNavigationBar.bottomAnchor, left: nil, right: view.rightAnchor, bottom: nil, paddingTop: 10, paddingLeft: 0, paddingRight: 20, paddingBottom: 0, width: 85, height: CartControllerVariables.userInfoButtonHeight)
+            
+    }
+    
+    @objc func userInfoButtonTapped(sender: UIButton!) {
+        let loginController = LoginController()
+        let logoutController = LogoutController()
+        
+        guard FirebaseAuth.Auth.auth().currentUser != nil else {
+            present(loginController, animated: true)
+            return
+        }
+        present(logoutController, animated: true)
+    }
 }
+
