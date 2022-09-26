@@ -20,6 +20,8 @@ class LogoutController: UIViewController {
         setupLogoutButton()
     }
     
+    //MARK: - Logout Button Initialization
+    
     private func setupLogoutButton() {
         let buttonTitle = "Log out"
         logoutButton.setInfo(buttonTitle: buttonTitle, isBordered: false)
@@ -35,6 +37,8 @@ class LogoutController: UIViewController {
             print("Could not log out")
         }
     }
+    
+    //MARK: - Constraints
     
     private func setupConstraints() {
         view.addSubview(logoutButton)

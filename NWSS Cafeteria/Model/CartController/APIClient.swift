@@ -8,21 +8,19 @@
 import Foundation
 import Alamofire
 import Stripe
+import FirebaseAuth
 
 class APIClient: NSObject, STPCustomerEphemeralKeyProvider {
     
     //Local Variables
     private static let ip = "10.0.0.33"
     private static let apachePortNumber = "80"
-    //private static var counter = 1
     
     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
         
         var createCustomerParams = [String: String]()
         createCustomerParams["api_version"] = apiVersion
-        createCustomerParams["customerId"] = "hfA3Sk3MJHT2RjGvZgZ2w1744nV2"
-        //print("empheral key x \(APIClient.counter)")
-        APIClient.counter += 1
+        createCustomerParams["customerId"] = FirebaseAuth.Auth.auth().currentUser!.uid
         AF.request(URL(string: "http://\(APIClient.ip):\(APIClient.apachePortNumber)/StripeBackend/empheralkey.php")!, method: .post, parameters: createCustomerParams, encoding: URLEncoding.default, headers: [:]).responseData { (apiResponse) in
                     guard let data = apiResponse.data else { return }
                     guard let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]) as [String : Any]??) else {

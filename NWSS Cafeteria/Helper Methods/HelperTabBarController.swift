@@ -9,7 +9,7 @@ import UIKit
 
 extension TabBarController {
     
-    func setUpTabBar() {
+    func setupTabBar() {
         
         //Tab Bar Initialization
         delegate = self

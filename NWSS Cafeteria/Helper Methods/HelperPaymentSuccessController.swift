@@ -9,7 +9,7 @@ import UIKit
 
 extension PaymentSuccessController {
     
-    func setUpPaymentSuccessController() {
+    func setupPaymentSuccessController() {
         view.backgroundColor = .backgroundWhite
     }
 }

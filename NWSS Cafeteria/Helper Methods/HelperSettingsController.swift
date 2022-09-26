@@ -9,13 +9,37 @@ import UIKit
 
 extension SettingsController {
     
-    func setUpSettingsController() {
-        
+    func setupSettingsController() {        
         view.backgroundColor = .backgroundWhite
     }
+}
+
+//MARK: - Settings Table View Data Source
+extension SettingsController: UITableViewDataSource {
     
-    @objc func doneButtonTapped(sender: UIButton!) {
-        self.dismiss(animated: true)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fullList.cellLabels[section].count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return fullList.cellTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return fullList.cellTitles[section]
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = settingsTableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as! SettingsTableViewCell
+        cell.set(indexPath: indexPath)
+        return cell;
+    }
+}
+
+//MARK: - Settings Table View Delegate
+extension SettingsController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return SettingsControllerVariables.cellHeight
+    }
 }

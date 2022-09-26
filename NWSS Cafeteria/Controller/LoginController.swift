@@ -17,6 +17,8 @@ class LoginController: InfoController {
         setupSignupButton()
     }
     
+    //MARK: - Login Button Initialization
+    
     private func setupLoginButton() {
         let buttonTitle = "Log in"
         topButton.setInfo(buttonTitle: buttonTitle, isBordered: false)
@@ -41,12 +43,9 @@ class LoginController: InfoController {
             }
             self.dismiss(animated: true)
         }
-        
-        //Check sign in on app launch
-        //Allow user to sign out with button
-        
     }
     
+    //MARK: - Signup Button Initialization
     private func setupSignupButton() {
         let buttonTitle = "Sign up"
         bottomButton.setInfo(buttonTitle: buttonTitle, isBordered: true)
@@ -62,6 +61,8 @@ class LoginController: InfoController {
         }
     }
     
+    
+    //MARK: - Constraints
    override func setupConstraints() {
        super.setupConstraints()
     }

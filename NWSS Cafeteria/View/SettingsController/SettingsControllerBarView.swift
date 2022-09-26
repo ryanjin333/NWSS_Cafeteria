@@ -1,25 +1,41 @@
 //
-//  SettingsControllerBarView.swift
+//  SettingsTableView.swift
 //  NWSS Cafeteria
 //
-//  Created by Ryan Jin on 2022-07-31.
+//  Created by Ryan Jin on 2022-09-25.
 //
 
 import UIKit
 
-extension SettingsController {
+class SettingsControllerBarView: UINavigationBar {
     
-    //MARK: - Bar Initialization
+    let settingsNavigationTitle: UINavigationItem = {
+        let navItem = UINavigationItem()
+        navItem.title = SettingsControllerVariables.navigationTitle
+        return navItem
+    }()
     
-    func setUpSettingsBar() {
-        
-        //Others
-        settingsNavigationBar.setItems([settingsNavigationTitle], animated: false)
-        
-        //Constraints
-        view.addSubview(settingsNavigationBar)
-        settingsNavigationBar.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupBar()
+        setupNavBar()
     }
     
+    convenience init() {
+        self.init(frame: CGRect.zero)
+    }
+    
+    private func setupNavBar() {
+        self.setItems([settingsNavigationTitle], animated: false)
+    }
+    
+    private func setupBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        self.standardAppearance = appearance
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

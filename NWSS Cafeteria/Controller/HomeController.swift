@@ -7,47 +7,13 @@
 
 
 import UIKit
+import FirebaseDatabase
 
 class HomeController: UIViewController {
     
-    //MARK: - Local Closure Variables
+    //MARK: - View Variables
     
-    let orderNavigationBar: UINavigationBar = {
-        let navBar = UINavigationBar()
-        navBar.backgroundColor = .transparent
-        navBar.prefersLargeTitles = true
-        navBar.largeTitleTextAttributes = [
-            .font: UIFont(name: "AvenirNext-DemiBold", size: 29)!
-        ]
-        return navBar
-    }()
-    
-    let orderNavigationTitle: UINavigationItem = {
-        let navItem = UINavigationItem()
-        navItem.title = HomeControllerVariables.navigationTitle
-        return navItem
-    }()
-    
-    let logo: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "NWSSLogo")
-        return imageView
-    }()
-    
-    let orderBarShadow: UIView = {
-        let view = UIView()
-        view.backgroundColor = .backgroundWhite
-        view.layer.applyShadow(color: .black, alpha: 0.25, x: 0, y: -6, blur: 17, spread: 0)
-        return view
-    }()
-    
-    let settingsButton: UIBarButtonItem = {
-        let barButton = UIBarButtonItem()
-        barButton.image = UIImage(systemName: "gearshape.fill")
-        barButton.tintColor = .transparent
-        barButton.action = #selector(settingsButtonTapped)
-        return barButton
-    }()
+    let orderBarShadow = OrderNavigationBarView()
     
     let homeTableView: UITableView = {
         let tableView = UITableView()
@@ -68,13 +34,96 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpHomeController()
-        setUpHomeTableView()
+        setupHomeController()
+        setupHomeTableView()
         homeTableViewDatabaseConfigurations()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setUpOrderBar()
+        setupConstraints()
+    }
+    
+    //MARK: - Table View Initialization
+    
+    func setupHomeTableView() {
+        
+        //Table View Initialization
+        self.homeTableView.backgroundColor = .backgroundWhite
+        self.homeTableView.separatorStyle = .none
+        homeTableView.dataSource = self
+        homeTableView.delegate = self
+        homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "homeCell")
+        
+        //Table View Constraints
+        view.addSubview(homeTableView)
+        view.addSubview(tableViewTopConstraint)
+        tableViewTopConstraint.addConstraint(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: HomeControllerVariables.barHeight)
+        homeTableView.addConstraint(top: tableViewTopConstraint.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: view.bottomAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 0)
+    }
+    
+    func homeTableViewDatabaseConfigurations() {
+        let ref = Database.database().reference()
+        ref.child(HomeControllerVariables.menuName).observe(.value) { snapshot in
+            
+            //MARK: Database: First Layer
+            var i = 0
+            for child in snapshot.children {
+                guard let child = child as? DataSnapshot else { return }
+                
+                //Food Variables Created
+                let sectionLabel: String
+                var cellLabels: [String] = []
+                var cellPictures: [String] = []
+                var cellPrice: [NSNumber] = []
+                
+                //First Layer Configuration(s)
+                sectionLabel = child.key
+                
+                //MARK: Database: Second Layer
+                var j = 0
+                for child in child.children {
+                    guard let child = child as? DataSnapshot else { return }
+                    
+                    //Second Layer Configuration(s)
+                    cellLabels.insert(child.key, at: j)
+                    
+                    //MARK: Database: Third Layer
+                    var k = 0
+                    for child in child.children {
+                        guard let child = child as? DataSnapshot else { return }
+                        
+                        //Third Layer Configuration(s)
+                        if k == HomeControllerVariables.pictureIndex {
+                            child.value as! String != "" ? cellPictures.insert(child.value as! String, at: j) : cellPictures.insert(HomeControllerVariables.nilImage, at: j)
+                        }
+                        else {
+                            cellPrice.insert(child.value as! NSNumber, at: j)
+                        } 
+                        k += 1
+                    }
+                    j += 1
+                }
+                self.foods.insert(Food(sectionLabel: sectionLabel, cellLabels: cellLabels, cellPictures: cellPictures, cellPrice: cellPrice), at: i)
+                if self.foods.count > snapshot.childrenCount {
+                    self.foods.remove(at: Int(snapshot.childrenCount))
+                }
+                i += 1
+            }
+            self.homeTableView.reloadData()
+        }
+    }
+    
+    //MARK: - Constraints
+    
+    private func setupConstraints() {
+        
+        //Variables
+        let safetyMarginHeight = view.safeAreaInsets.top
+        let fullBarHeight = HomeControllerVariables.barHeight + safetyMarginHeight
+        
+        //Constraints
+        view.addSubview(orderBarShadow)
+        orderBarShadow.addConstraint(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: fullBarHeight)
     }
 }
 

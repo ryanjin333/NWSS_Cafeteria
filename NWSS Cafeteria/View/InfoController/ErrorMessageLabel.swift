@@ -26,9 +26,10 @@ class ErrorMessageLabel: UILabel {
     private func setupErrorLabel() {
         self.textColor = .red
         self.font = UIFont(name: "AvenirNext-Medium", size: 11)
+        
+        //MARK: Hidden by default
         self.isHidden = true
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

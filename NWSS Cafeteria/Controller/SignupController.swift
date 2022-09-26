@@ -24,6 +24,8 @@ class SignupController: InfoController {
         setupLoginButton()
     }
     
+    //MARK: - Signup Button Initialization
+    
     private func setupSignupButton() {
         let buttonTitle = "Sign up"
         topButton.setInfo(buttonTitle: buttonTitle, isBordered: false)
@@ -52,6 +54,8 @@ class SignupController: InfoController {
         }
     }
     
+    //MARK: - Login Button Initialization
+    
     private func setupLoginButton() {
         let buttonTitle = "Log in"
         bottomButton.setInfo(buttonTitle: buttonTitle, isBordered: true)
@@ -67,14 +71,12 @@ class SignupController: InfoController {
         }
     }
     
+    //MARK: - Constraints
+    
     override func setupConstraints() {
         super.setupConstraints()
         view.addSubview(nameTextfield)
         
         nameTextfield.addConstraint(top: nil, left: view.leftAnchor, right: view.rightAnchor, bottom: emailTextfield.topAnchor, paddingTop: 0, paddingLeft: InfoControllerVariables.leftRightPadding, paddingRight: InfoControllerVariables.leftRightPadding, paddingBottom: 20, width: 0, height: 50)
      }
-    
-    
-    
-    
 }

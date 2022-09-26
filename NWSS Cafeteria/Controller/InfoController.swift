@@ -53,10 +53,13 @@ class InfoController: UIViewController {
         setupKeyboardLayout()
     }
     
+    //MARK: - Info Controller Functions
     func setupGreetingTextLabel(textLabel: String) {
         let textLabel = textLabel
         greetingTextLabel.text = textLabel
     }
+    
+    //MARK: - Keyboard Layout
     
     func setupKeyboardLayout() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -77,6 +80,7 @@ class InfoController: UIViewController {
         }
     }
     
+    //MARK: - Constraints
     func setupConstraints() {
         view.addSubview(greetingTextLabel)
         view.addSubview(emailTextfield)

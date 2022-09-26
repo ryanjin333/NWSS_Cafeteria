@@ -23,7 +23,13 @@ class CartControllerVariables {
     //Variables for Payment Status Indicator View
     static let paymentStatusIndicatorViewCornerRadius:CGFloat = 11
     
+    //Variables for Pay button
+    static let payButtonTitle = "Pay Now"
+    
     //Variables for User Info Button
     static let userInfoButtonHeight: CGFloat = 30
+    
+    //Error Message Variables
+    static let loginFirstMessage = "Please log in before paying"
     
 }
