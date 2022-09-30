@@ -21,7 +21,7 @@ class PayButton: UIButton {
     
     private func setupButton() {
         self.backgroundColor = .black
-        self.layer.applyShadow(color: .black, alpha: 0.5, x: 0, y: 3, blur: 8, spread: 0)
+        //self.layer.applyShadow(color: .black, alpha: 0.5, x: 0, y: 3, blur: 8, spread: 0)
         self.layer.cornerRadius = 10
     }
     

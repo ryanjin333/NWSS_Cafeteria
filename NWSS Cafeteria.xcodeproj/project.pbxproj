@@ -29,6 +29,7 @@
 		5732E5BC28E1303400636BEB /* OrderNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5BB28E1303400636BEB /* OrderNavigationBarView.swift */; };
 		5732E5BE28E13C9400636BEB /* SummaryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5BD28E13C9400636BEB /* SummaryLabelView.swift */; };
 		5732E5C028E14A2600636BEB /* PaymentStatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5BF28E14A2600636BEB /* PaymentStatusIndicatorView.swift */; };
+		5732E5C228E6AB8300636BEB /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5C128E6AB8200636BEB /* BackButton.swift */; };
 		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
 		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
 		573808D628A87D6E0082AC43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 573808D528A87D6E0082AC43 /* GoogleService-Info.plist */; };
@@ -83,6 +84,7 @@
 		5732E5BB28E1303400636BEB /* OrderNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNavigationBarView.swift; sourceTree = "<group>"; };
 		5732E5BD28E13C9400636BEB /* SummaryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryLabelView.swift; sourceTree = "<group>"; };
 		5732E5BF28E14A2600636BEB /* PaymentStatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusIndicatorView.swift; sourceTree = "<group>"; };
+		5732E5C128E6AB8200636BEB /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
 		573808D528A87D6E0082AC43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				575F412728DAA3000036C995 /* UserInfoTextFieldView.swift */,
 				5732E59A28DCC1E400636BEB /* AccountButton.swift */,
 				5732E5A628DE8CED00636BEB /* ErrorMessageLabel.swift */,
+				5732E5C128E6AB8200636BEB /* BackButton.swift */,
 			);
 			path = InfoController;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				5732E5B628E1193B00636BEB /* PaymentSuccessControllerVariables.swift in Sources */,
 				579BF6872897625500DC4BAE /* HelperSettingsController.swift in Sources */,
 				571DB47F28B6F58E004FC579 /* HelperCartController.swift in Sources */,
+				5732E5C228E6AB8300636BEB /* BackButton.swift in Sources */,
 				5732E59B28DCC1E400636BEB /* AccountButton.swift in Sources */,
 				5732E5A228DCDA4B00636BEB /* InfoControllerVariables.swift in Sources */,
 				5732E5A728DE8CED00636BEB /* ErrorMessageLabel.swift in Sources */,

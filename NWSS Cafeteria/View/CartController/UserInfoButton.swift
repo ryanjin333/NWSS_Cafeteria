@@ -52,7 +52,7 @@ class UserInfoButton: UIView {
     private func setupView() {
         self.layer.cornerRadius = 0.5 * CartControllerVariables.userInfoButtonHeight
         self.backgroundColor = .black
-        self.layer.applyShadow(color: .black, alpha: 0.5, x: 0, y: 2, blur: 8, spread: 0)
+        //self.layer.applyShadow(color: .black, alpha: 0.5, x: 0, y: 2, blur: 8, spread: 0)
     }
     
     required init?(coder: NSCoder) {

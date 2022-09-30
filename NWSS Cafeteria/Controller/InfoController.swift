@@ -9,6 +9,8 @@ import UIKit
 
 class InfoController: UIViewController {
     
+    let backButton = BackButton()
+    
     let greetingTextLabel: UILabel = {
         let label = UILabel() 
         label.font = UIFont(name: "AvenirNext-DemiBold", size: 32)
@@ -50,6 +52,7 @@ class InfoController: UIViewController {
         super.viewDidLoad()
         setupInfoController()
         setupConstraints()
+        setupBackButton()
         setupKeyboardLayout()
     }
     
@@ -80,8 +83,18 @@ class InfoController: UIViewController {
         }
     }
     
+    //MARK: - Back Button Functions
+    private func setupBackButton() {
+        backButton.backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc private func backButtonPressed(sender: UIButton!) {
+        dismiss(animated: true)
+    }
+    
     //MARK: - Constraints
     func setupConstraints() {
+        view.addSubview(backButton)
         view.addSubview(greetingTextLabel)
         view.addSubview(emailTextfield)
         view.addSubview(passwordTextfield)
@@ -91,7 +104,8 @@ class InfoController: UIViewController {
         view.addSubview(topAndBottomButtonDivider)
         view.addSubview(bottomButton)
         
-        greetingTextLabel.addConstraint(top: view.topAnchor, left: view.leftAnchor, right: nil, bottom: nil, paddingTop: 100, paddingLeft: InfoControllerVariables.leftRightPadding, paddingRight: 0, paddingBottom: 0, width: 150, height: 0)
+        backButton.addConstraint(top: view.topAnchor, left: view.leftAnchor, right: nil, bottom: nil, paddingTop: 20, paddingLeft: InfoControllerVariables.leftRightPadding, paddingRight: 0, paddingBottom: 0, width: 35, height: 35)
+        greetingTextLabel.addConstraint(top: backButton.bottomAnchor, left: view.leftAnchor, right: nil, bottom: nil, paddingTop: InfoControllerVariables.greetingLabelTopConstraint, paddingLeft: InfoControllerVariables.leftRightPadding, paddingRight: 0, paddingBottom: 0, width: 150, height: 0)
         emailTextfield.addConstraint(top: nil, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 0, paddingLeft: InfoControllerVariables.leftRightPadding, paddingRight: InfoControllerVariables.leftRightPadding, paddingBottom: 0, width: 0, height: 50)
         passwordTextfield.addConstraint(top: emailTextfield.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, bottom: nil, paddingTop: 20, paddingLeft: InfoControllerVariables.leftRightPadding, paddingRight: InfoControllerVariables.leftRightPadding, paddingBottom: 0, width: 0, height: 50)
         continueErrorLabel.addConstraint(top: passwordTextfield.bottomAnchor, left: nil, right: nil, bottom: topButton.topAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 3, width: 0, height: 0)
