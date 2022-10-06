@@ -66,7 +66,9 @@ class CartController: UIViewController {
         return label
     }()
     
-    let paymentStatusIndicator = PaymentStatusIndicatorView()
+    //TODO: Implement when payment gateway is needed
+    
+    //let paymentStatusIndicator = PaymentStatusIndicatorView()
     
     let loginMessageLabel: ErrorMessageLabel = {
         let label = ErrorMessageLabel(errorMessage: CartControllerVariables.loginFirstMessage)
@@ -171,16 +173,19 @@ class CartController: UIViewController {
             payButton.isEnabled = true
             payButton.backgroundColor = .black
         }
-        if FirebaseAuth.Auth.auth().currentUser != nil {
-            let config = STPPaymentConfiguration.shared
-            config.requiredShippingAddressFields = nil
-            config.companyName = "NWSS Cafeteria"
-            customerContext = STPCustomerContext(keyProvider: APIClient())
-            paymentContext =  STPPaymentContext(customerContext: customerContext!, configuration: config, theme: .defaultTheme)
-            self.paymentContext?.delegate = self
-            self.paymentContext?.hostViewController = self
-            self.paymentContext?.paymentAmount = Int(String(format: "%.2f", totalOfOrder).replacingOccurrences(of: ".", with: ""))!
-        }
+        
+        //TODO: Implement when payment gateway is needed
+        
+//        if FirebaseAuth.Auth.auth().currentUser != nil {
+//            let config = STPPaymentConfiguration.shared
+//            config.requiredShippingAddressFields = nil
+//            config.companyName = "NWSS Cafeteria"
+//            customerContext = STPCustomerContext(keyProvider: APIClient())
+//            paymentContext =  STPPaymentContext(customerContext: customerContext!, configuration: config, theme: .defaultTheme)
+//            self.paymentContext?.delegate = self
+//            self.paymentContext?.hostViewController = self
+//            self.paymentContext?.paymentAmount = Int(String(format: "%.2f", totalOfOrder).replacingOccurrences(of: ".", with: ""))!
+//        }
     }
     
     @objc func payButtonTapped(sender: UIButton!) {
@@ -195,10 +200,20 @@ class CartController: UIViewController {
             }
             return
         }
-        DispatchQueue.main.async {
-            self.isPayButtonTapped = true
-            self.paymentContext?.presentPaymentOptionsViewController()
-        }
+        //Reset Variables
+        totalOfOrder = 0
+        HomeTableViewCell.receipt = [:]
+        let paymentSuccessController = PaymentSuccessController()
+        paymentSuccessController.modalPresentationStyle = .fullScreen
+        present(paymentSuccessController, animated: true)
+        
+        
+        //TODO: Implement when payment gateway is needed
+        
+//        DispatchQueue.main.async {
+//            self.isPayButtonTapped = true
+//            self.paymentContext?.presentPaymentOptionsViewController()
+//        }
     }
     
     //MARK: - Constraints
@@ -297,11 +312,11 @@ class CartController: UIViewController {
             zeroItemMessageLabel.isHidden = true
         }
         
-        //MARK: - Constraints for Payment Status Indicator
-        view.addSubview(paymentStatusIndicator)
-        paymentStatusIndicator.addConstraint(top: nil, left: nil, right: nil, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 80, height: 80)
-        paymentStatusIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        paymentStatusIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //MARK: - Constraints for Payment Status Indicator (Implement when payment gateways is needed)
+//        view.addSubview(paymentStatusIndicator)
+//        paymentStatusIndicator.addConstraint(top: nil, left: nil, right: nil, bottom: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 80, height: 80)
+//        paymentStatusIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        paymentStatusIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 

@@ -94,6 +94,7 @@ class HomeTableViewCell: UITableViewCell {
         self.priceLabel.text = "$\(String(format: "%.2f", Double(truncating: food.cellPrice[indexPath.row])))"
         
         //Stepper Setup
+        cellStepper.value = 0
         cellStepper.tag = indexPath.row
         cellStepper.addTarget(self, action: #selector(cellStepperTapped), for: .valueChanged)
         
@@ -105,9 +106,9 @@ class HomeTableViewCell: UITableViewCell {
         }
         
         //Seperator Line Setup
-        if indexPath.row == food.cellLabels.count - 1 {
-            seperatorLine.backgroundColor = .clear
-        }
+//        if indexPath.row == food.cellLabels.count - 1 {
+//            seperatorLine.backgroundColor = .clear
+//        }
 
         
         //Home Table View Cell Constraints
@@ -115,7 +116,7 @@ class HomeTableViewCell: UITableViewCell {
         itemImageView.addConstraint(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, right: nil, bottom: nil, paddingTop: itemImageTopConstraint, paddingLeft: 10, paddingRight: 0, paddingBottom: 0, width: HomeControllerVariables.itemImageLength, height: HomeControllerVariables.itemImageLength)
         priceLabel.addConstraint(top: titleLabel.bottomAnchor, left: itemImageView.rightAnchor, right: nil, bottom: nil, paddingTop: 3, paddingLeft: 10, paddingRight: 0, paddingBottom: 0, width: 75, height: 0)
         cellStepper.addConstraint(top: self.contentView.topAnchor, left: nil, right: self.contentView.rightAnchor, bottom: nil, paddingTop: HomeControllerVariables.cellStepperTopPadding, paddingLeft: 0, paddingRight: 10, paddingBottom: 0, width: HomeControllerVariables.cellSteppterWidth, height: HomeControllerVariables.cellStepperHeight)
-        seperatorLine.addConstraint(top: nil, left: self.contentView.leftAnchor, right: self.contentView.rightAnchor, bottom: self.contentView.bottomAnchor, paddingTop: 0, paddingLeft: HomeControllerVariables.itemImageLength + 20, paddingRight: 20, paddingBottom: 0, width: 0, height: 1)
+        seperatorLine.addConstraint(top: nil, left: self.contentView.leftAnchor, right: self.contentView.rightAnchor, bottom: self.contentView.bottomAnchor, paddingTop: 0, paddingLeft: HomeControllerVariables.itemImageLength + 20, paddingRight: 20, paddingBottom: 2, width: 0, height: 1)
     }
     
     //MARK: - Button Actions

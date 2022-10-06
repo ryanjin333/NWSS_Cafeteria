@@ -62,6 +62,8 @@ class HomeController: UIViewController {
     }
     
     func homeTableViewDatabaseConfigurations() {
+        
+        //Database Configurations
         let ref = Database.database().reference()
         ref.child(HomeControllerVariables.menuName).observe(.value) { snapshot in
             
@@ -109,6 +111,9 @@ class HomeController: UIViewController {
                 }
                 i += 1
             }
+            //Reset Receipt
+            HomeTableViewCell.receipt = [:]
+            
             self.homeTableView.reloadData()
         }
     }

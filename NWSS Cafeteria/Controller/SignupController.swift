@@ -49,7 +49,14 @@ class SignupController: InfoController {
                 self.continueErrorLabel.isHidden = false
                 return
             }
-            APIClient.createCustomer(email: email, name: name, customerId: FirebaseAuth.Auth.auth().currentUser!.uid)
+            
+            
+            
+            
+            
+            //TODO: Implement when payment gateway is needed
+            
+            //APIClient.createCustomer(email: email, name: name, customerId: FirebaseAuth.Auth.auth().currentUser!.uid)
             self.dismiss(animated: true)
         }
     }

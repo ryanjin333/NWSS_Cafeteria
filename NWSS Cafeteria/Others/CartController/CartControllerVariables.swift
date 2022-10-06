@@ -24,7 +24,7 @@ class CartControllerVariables {
     static let paymentStatusIndicatorViewCornerRadius:CGFloat = 11
     
     //Variables for Pay button
-    static let payButtonTitle = "Pay Now"
+    static let payButtonTitle = "Confirm Order"
     
     //Variables for User Info Button
     static let userInfoButtonHeight: CGFloat = 30
