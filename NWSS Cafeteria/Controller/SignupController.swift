@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class SignupController: InfoController {
     
@@ -42,7 +43,8 @@ class SignupController: InfoController {
         }
         
         //Firebase Auth
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { result, error in            
+        let auth = FirebaseAuth.Auth.auth()
+        auth.createUser(withEmail: email, password: password) { result, error in            
             guard error == nil else {
                 self.missingFieldErrorLabel.isHidden = true
                 self.continueErrorLabel.text = InfoControllerVariables.signupErrorMessage
@@ -50,13 +52,25 @@ class SignupController: InfoController {
                 return
             }
             
+            let data = [
+                "name" : name,
+                "email" : email
+            ]
             
-            
-            
+            let firestoreDatabase = Firestore.firestore()
+            firestoreDatabase.collection("customers").document(auth.currentUser!.uid).collection("general").document("info").setData(data) { error in
+                if let error = error {
+                    print("Error writing document: \(error)")
+                }
+                else {
+                    print("Document successfully written!")
+                }
+                
+            }
             
             //TODO: Implement when payment gateway is needed
             
-            //APIClient.createCustomer(email: email, name: name, customerId: FirebaseAuth.Auth.auth().currentUser!.uid)
+            //APIClient.createCustomer(email: email, name: name, customerId: auth.currentUser!.uid)
             self.dismiss(animated: true)
         }
     }

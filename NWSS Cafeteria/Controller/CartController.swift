@@ -203,9 +203,16 @@ class CartController: UIViewController {
         //Reset Variables
         totalOfOrder = 0
         HomeTableViewCell.receipt = [:]
-        let paymentSuccessController = PaymentSuccessController()
-        paymentSuccessController.modalPresentationStyle = .fullScreen
-        present(paymentSuccessController, animated: true)
+        
+        //Present Alert Message
+        let alert = UIAlertController(title: CartControllerVariables.alertTitle, message: CartControllerVariables.alertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: CartControllerVariables.alertContinueLabel, style: .default) { _ in
+            let paymentSuccessController = PaymentSuccessController()
+            paymentSuccessController.modalPresentationStyle = .fullScreen
+            self.present(paymentSuccessController, animated: true)
+        })
+        alert.addAction(UIAlertAction(title: CartControllerVariables.alertCancelLabel, style: .cancel))
+        self.present(alert, animated: true)
         
         
         //TODO: Implement when payment gateway is needed

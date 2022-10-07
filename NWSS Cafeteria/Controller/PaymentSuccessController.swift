@@ -50,7 +50,7 @@ class PaymentSuccessController: UIViewController {
         //Create new instance of Tab Bar Controller
         let tabBarController = TabBarController()
         tabBarController.modalPresentationStyle = .fullScreen
-        present(tabBarController, animated: true)
+        present(tabBarController, animated: false)
     }
     
     //MARK: - Constraints

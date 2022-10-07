@@ -20,4 +20,8 @@ class InfoControllerVariables {
     static let missingFieldMessage = "Please fill in all fields"
     static let loginErrorMessage = "Incorrect email or password"
     static let signupErrorMessage = "There was an error creating your account"
+    
+    
+    //Variables for Log out controller
+    static let userProfilePictureLength: CGFloat = 80
 }

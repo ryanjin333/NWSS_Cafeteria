@@ -30,6 +30,8 @@
 		5732E5BE28E13C9400636BEB /* SummaryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5BD28E13C9400636BEB /* SummaryLabelView.swift */; };
 		5732E5C028E14A2600636BEB /* PaymentStatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5BF28E14A2600636BEB /* PaymentStatusIndicatorView.swift */; };
 		5732E5C228E6AB8300636BEB /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5C128E6AB8200636BEB /* BackButton.swift */; };
+		5732E5C728EF713300636BEB /* UserInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5C628EF713300636BEB /* UserInfoLabel.swift */; };
+		5732E5CB28EFD57A00636BEB /* UserProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5732E5CA28EFD57A00636BEB /* UserProfileImageView.swift */; };
 		573808CA289D9C0C0082AC43 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */; };
 		573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */; };
 		573808D628A87D6E0082AC43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 573808D528A87D6E0082AC43 /* GoogleService-Info.plist */; };
@@ -85,6 +87,8 @@
 		5732E5BD28E13C9400636BEB /* SummaryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryLabelView.swift; sourceTree = "<group>"; };
 		5732E5BF28E14A2600636BEB /* PaymentStatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusIndicatorView.swift; sourceTree = "<group>"; };
 		5732E5C128E6AB8200636BEB /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		5732E5C628EF713300636BEB /* UserInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoLabel.swift; sourceTree = "<group>"; };
+		5732E5CA28EFD57A00636BEB /* UserProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileImageView.swift; sourceTree = "<group>"; };
 		573808C9289D9C0C0082AC43 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		573808D1289EE8DE0082AC43 /* HomeControllerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerVariables.swift; sourceTree = "<group>"; };
 		573808D528A87D6E0082AC43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -183,6 +187,15 @@
 				5732E5B528E1193B00636BEB /* PaymentSuccessControllerVariables.swift */,
 			);
 			path = PaymentSuccessController;
+			sourceTree = "<group>";
+		};
+		5732E5C528EF70FD00636BEB /* LogoutController */ = {
+			isa = PBXGroup;
+			children = (
+				5732E5C628EF713300636BEB /* UserInfoLabel.swift */,
+				5732E5CA28EFD57A00636BEB /* UserProfileImageView.swift */,
+			);
+			path = LogoutController;
 			sourceTree = "<group>";
 		};
 		5737965328AC0C5500527974 /* HomeController */ = {
@@ -291,6 +304,7 @@
 				571DB48528B6F8AB004FC579 /* CartController */,
 				575F412528DA998D0036C995 /* InfoController */,
 				5793808328C96A0D00477094 /* PaymentSuccessController */,
+				5732E5C528EF70FD00636BEB /* LogoutController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +520,7 @@
 				577BA273288CE4DA0093D25F /* UIViewExtension.swift in Sources */,
 				5732E59928DB840900636BEB /* HelperInfoController.swift in Sources */,
 				57EB8FF828B16DBE0001AB3F /* Food.swift in Sources */,
+				5732E5CB28EFD57A00636BEB /* UserProfileImageView.swift in Sources */,
 				5793806B28B9CDB700477094 /* HelperTabBarController.swift in Sources */,
 				5732E5A928DEA82700636BEB /* LogoutController.swift in Sources */,
 				5793807828C401A000477094 /* UILabelExtension.swift in Sources */,
@@ -533,6 +548,7 @@
 				577BA258288CD3FB0093D25F /* SceneDelegate.swift in Sources */,
 				5793806728B9B44A00477094 /* Receipt.swift in Sources */,
 				571DB48428B6F710004FC579 /* CartControllerVariables.swift in Sources */,
+				5732E5C728EF713300636BEB /* UserInfoLabel.swift in Sources */,
 				579BF6802897421200DC4BAE /* SettingsTitleTableList.swift in Sources */,
 				579BF67C28963EB600DC4BAE /* UICALayerExtension.swift in Sources */,
 				573808D2289EE8DE0082AC43 /* HomeControllerVariables.swift in Sources */,

@@ -32,4 +32,9 @@ class CartControllerVariables {
     //Error Message Variables
     static let loginFirstMessage = "Please log in before paying"
     
+    //Varibles for Alert
+    static let alertTitle = "Confirm"
+    static let alertMessage = "Tap continue to confirm your order."
+    static let alertContinueLabel = "Continue"
+    static let alertCancelLabel = "Cancel"
 }
